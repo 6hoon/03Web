@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+  }
+  .header,.footer {
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: rgb(204, 150, 69);
+    color: rgb(160, 47, 47);
+  }
+  .nav {
+    display: inline-block;
+    margin-left: 4%;
+    width: 10%;
+    background: black;
+    color: white;
+  }
+  .section{
+    display: inline-block;
+    width: 70%;
+    background: rgb(118, 197, 43);
+  }
+  .aside{
+    display: inline-block;
+    width: 10%;
+    background: rgb(199, 113, 15);
+  }
+  .nav,.section,.aside{
+    height: 250px;
+  }
+  
