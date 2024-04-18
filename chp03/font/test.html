@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/c4ece921e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      header > div.first {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      header > div.search {
+        width: 400px;
+        border: 2px solid #25b512;
+        margin: 4px;
+        padding: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+      }
+      header > div.search > input {
+        width: 300px;
+        border: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="first">
+        <div>
+          <span><i class="fa-solid fa-grip-lines"></i></span>
+          <span><i class="fa-thin fa-comment-dollar"></i></span>
+        </div>
+        <div>
+          <span><i class="fa-light fa-comment-dots"></i></span>
+          <span><i class="fa-light fa-bell"></i></span>
+        </div>
+      </div>
+      <div class="search">
+        <span><i class="fa-solid fa-n"></i>&nbsp</span>
+        <input type="text" placeholder="검색어를 입력해주세요" />
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      </div>
+      <div class="menu">
+        <span><i class="fa-solid fa-envelope"></i></span>
+        <span><i class="fa-solid fa-mug-saucer"></i></span>
+      </div>
+    </header>
+  </body>
+</html>

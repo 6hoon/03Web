@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/6a2bc27371.js"
+      crossorigin=""
+    ></script>
+    <style>
+      header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 40px;
+      }
+      header > div {
+        width: 250px;
+        margin-left: 15px;
+        border: 2px solid #25b512;
+        padding: 4px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+      }
+      header > div.search > input:focus {
+        outline: 1px solid blue;
+      }
+      header > div.search > input {
+        border-width: 0px;
+        font-size: 10px;
+        width: 200px;
+      }
+      header > div.search > span > i {
+        color: blue;
+        font-size: 18px;
+        position: absolute;
+        right: 10px;
+        top: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span><b>네이버카페</b></span>
+      <div class="search">
+        <input type="text" placeholder="원하는 카페 글을 찾아보세요" />
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      </div>
+    </header>
+  </body>
+</html>

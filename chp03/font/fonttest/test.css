@@ -1,0 +1,75 @@
+div {
+  border: 1px solid black;
+}
+.header1 {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header1 > div > i {
+  margin: 2px;
+}
+.header2 {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header2 > div.search {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border: 3px solid #25b512;
+  border-radius: 60px;
+}
+.header2 > div.search > i {
+  color: #25b512;
+  font-size: larger;
+}
+.header2 > div.search > input {
+  width: 75%;
+  border: 0px;
+}
+.header2 > div.search > input:focus {
+  outline-width: 0px;
+}
+.header2 > div.search > span > i.search {
+  color: #25b512;
+  font-size: larger;
+}
+.header2 > div.subside {
+  display: flex;
+  align-items: center;
+}
+.header3 {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header3 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+.header3 > div > i {
+  font-size: 24px;
+  color: #25b512;
+}
+.header3 > div > span {
+  font-size: 12px;
+}
