@@ -1,7 +1,10 @@
 body {
   margin: 0;
 }
-header {
+a {
+  text-decoration: none;
+}
+header.newsheader {
   border: 1px solid black;
   width: 100%;
   height: 50px;
@@ -10,16 +13,27 @@ header {
   align-items: center;
   padding: 0 10px;
 }
-header > div {
-  display: flex;
-  align-items: center;
-}
-header > div > a {
-  color: rgb(206, 204, 204);
-  font-size: 0.8em;
-  text-decoration: none;
-}
-header > div > a.logo {
+header.newsheader > h1 > a {
+  font-size: 1em;
   color: white;
-  font-size: 1.2em;
+}
+header.newsheader > ul {
+  padding: 1px;
+  display: flex;
+  list-style: none;
+}
+header.newsheader > ul > li > a {
+  color: white;
+}
+
+nav.newsmenu {
+}
+nav.newsmenu > ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+nav.newsmenu > ul > li > a {
+  text-decoration: none;
+  padding: 0 5px;
 }

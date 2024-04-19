@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="logintest.css" />
+    <script
+      src="https://kit.fontawesome.com/c4ece921e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <fieldset style="margin: 0 auto; width: 330px">
+      <legend style="margin: 0 auto; text-align: center">
+        <h1>로그인</h1>
+      </legend>
+
+      <div class="con">
+        <div class="ratio">
+          <input type="radio" name="client" id="client1" value="1" />
+          <label for="client">회원</label>
+          <input type="radio" name="client" id="client2" value="2" />
+          <label for="nonClient">비회원(주문조회)</label>
+        </div>
+        <div class="login">
+          <div>
+            <input
+              type="text"
+              name="userId"
+              id="userId"
+              placeholder="ID"
+              size="30"
+            /><br />
+            <input
+              type="text"
+              name="userPw"
+              id="userPw"
+              placeholder="PW"
+              size="30"
+            />
+          </div>
+          <input
+            class="loginLogo"
+            type="submit"
+            name="login"
+            id="login"
+            value="로그인"
+          />
+        </div>
+        <div class="check">
+          <div>
+            <input type="checkbox" name="userCheck" id="userCheck" />
+            <label for="userCheck">아이디저장</label>
+          </div>
+          <a href="#"
+            >OTP 로그인<i class="fa-regular fa-circle-question"></i
+          ></a>
+        </div>
+        <div class="last">
+          <button>회원가입</button>
+          <button>아이디 찾기</button>
+          <button>비밀번호 찾기</button>
+        </div>
+      </div>
+    </fieldset>
+  </body>
+</html>

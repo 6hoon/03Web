@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        border: 3px solid black;
+        padding: 10px;
+        background-color: beige;
+      }
+      #slider,
+      #score {
+        width: 470px;
+      }
+      datalist {
+        display: grid;
+        grid-auto-flow: column;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>로그인폼</h1>
+    <hr />
+    <form action="loginRegister.jsp" method="post">
+      <label for="userId">사용자 ID</label>
+      <input
+        type="text"
+        id="userId"
+        name="userId"
+        placeholder="ID"
+        size="20"
+        maxlength="8"
+        required
+      />
+      <br />
+      <label for="userId">사용자 ID</label>
+      <input
+        type="password"
+        id="userPw"
+        name="userPw"
+        placeholder="PW"
+        size="20"
+        maxlength="8"
+        required
+      />
+      <br />
+      <!-- list -->
+      <label for="nation">나라</label>
+      <input type="text" name="nation" id="nation" list="nationList" />
+      <datalist id="nationList">
+        <option value="가나">가나</option>
+        <option value="스위스">스위스</option>
+        <option value="브라질">브라질</option></datalist
+      ><br />
+
+      <!-- checkbox -->
+      <label for="cook1">짜장면</label>
+      <input type="checkbox" name="cook1" id="cook1" value="1" />
+      <label for="cook2">짬뽕</label>
+      <input type="checkbox" name="cook2" id="cook2" value="2" checked />
+      <label for="cook3">탕수육</label>
+      <input type="checkbox" name="cook3" id="cook3" value="3" /><br />
+
+      <!-- radio -->
+      <input type="radio" name="china" id="china1" value="1" />
+      <label for="china1"
+        >짜장면<img src="../../source/3/media/jajang.png" alt="짜장면"
+      /></label>
+      <input type="radio" name="china" id="china2" value="2" checked />
+      <label for="china2"
+        >짬뽕<img src="../../source/3/media/jjambbong.png" alt="짬뽕"
+      /></label>
+      <input type="radio" name="china" id="china3" value="3" />
+      <label for="china3"
+        >탕수육<img
+          src="../../source/3/media/tangsuyuk.png"
+          alt="탕수육" /></label
+      ><br />
+
+      <!-- select -->
+      <label for="china">음식선택</label>
+      <select name="china" id="china">
+        <option value="1">짜장면</option>
+        <option value="2" selected>짬뽕</option>
+        <option value="3">탕수육</option></select
+      ><br />
+
+      <!-- label -->
+      <label for="bodyColor">색상선택</label>
+      <input
+        type="color"
+        name="bodyColor"
+        id="bodyColor"
+        value="#ff0000"
+        onchange="document.body.style.color=this.value"
+      />
+      <br />
+
+      <!-- 숫자범위 -->
+      <label for="weight">숫자범위0~10.0</label>
+      <input
+        type="number"
+        name="weight"
+        id="weight"
+        min="0.0"
+        max="10.0"
+        step="0.5"
+        value="5.0"
+      />
+      <br />
+
+      <!-- 부분범위 -->
+      <label for="score">0~100까지 부분범위</label><br />
+      <input
+        type="range"
+        name="score"
+        id="score"
+        min="0"
+        max="100"
+        list="scorerange"
+      />
+      <datalist id="scorerange">
+        <option value="10" label="low">10</option>
+        <option value="50" label="center">50</option>
+        <option value="90" label="high">90</option>
+      </datalist>
+      <br />
+
+      <!-- 전송 -->
+      <input type="submit" value="전송" />
+    </form>
+
+    <!-- search -->
+    <form action="https://search.naver.com/search.naver" method="get">
+      <label for="query">네이버로 보낼 검색내용</label>
+      <input
+        type="text"
+        name="query"
+        id="query"
+        size="20"
+        maxlength="20"
+        placeholder="검색"
+        required
+      /><br />
+      <!-- 버튼을 사용할 경우 태그로 이미지를 넣을 수 있음 -->
+      <button type="submit">
+        <img src="../../source/3/media/button.png" alt="전송버튼" />
+      </button>
+      <!-- input submit type은 text 형태만 가능 -->
+      <input type="submit" value="전송" />
+    </form>
+  </body>
+</html>

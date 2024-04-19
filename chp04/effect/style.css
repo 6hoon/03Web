@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px; /*원근감설정*/
+}
+
+.flip-btn {
+  width: 200px;
+  height: 100px;
+  color: white;
+  text-align: center; /*글씨 가로중앙정렬*/
+  line-height: 100px; /*글씨 세로중앙정렬 height100px만큼 line-height: 100px 셋팅하면 중앙에정렬*/
+  transform-style: preserve-3d; /*3차원으로 변경*/
+  transition: 0.5s; /*0.5초 지연*/
+  cursor: pointer; /*커서를 손바닥 모양*/
+}
+
+.flip-btn:hover {
+  /*커서를 올리면 x축으로 -90도 회전*/
+  transform: rotateX(-90deg);
+}
+
+.front {
+  background-color: goldenrod;
+  height: 100px;
+  transform: translateZ(50px);
+}
+
+.back {
+  background-color: darkgoldenrod;
+  height: 100px;
+  transform: rotateX(90deg) translateZ(150px);
+}

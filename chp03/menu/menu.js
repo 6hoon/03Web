@@ -7,3 +7,4 @@ const navToggle = document.querySelector(".nav-toggle");
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
+navMenu.classList.value;
