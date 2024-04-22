@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes spanChangeColor {
+        0% {
+          color: red;
+          border: solid 1px brown;
+          background-color: blue;
+          padding: 20px;
+          font-size: 500%;
+        }
+        30% {
+          color: yellow;
+        }
+        70% {
+          color: green;
+          background-color: red;
+        }
+        90% {
+          color: blue;
+        }
+        100% {
+          color: red;
+          border: solid 1px brown;
+          background-color: blue;
+        }
+      }
+      span:hover {
+        animation-name: spanChangeColor;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>애니메이션</h1>
+    <hr />
+    <p>
+      Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. Quia
+      animi similique commodi ex vel sit non saepe, est excepturi, eum sequi
+      suscipit numquam repellendus, ipsa amet. Tempore repellendus assumenda
+      voluptatibus! Commodi a sequi corporis accusamus veniam neque et dolorem.
+      Voluptates quis fugit accusantium, laborum aspernatur perspiciatis ea ab
+      officia repellat minima, nemo in voluptatem molestiae placeat corporis
+      fuga, reiciendis assumenda!
+    </p>
+  </body>
+</html>

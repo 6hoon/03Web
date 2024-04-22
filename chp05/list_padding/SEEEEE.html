@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        border: 1px solid black;
+        padding: 0;
+        list-style: none;
+      }
+      ul > li {
+        background-color: beige;
+        border: 1px solid red;
+        margin-bottom: 4px;
+      }
+      div {
+        width: 500px;
+        height: 200px;
+        overflow: hidden;
+        margin-top: 16px;
+        border: 1px solid black;
+      }
+      div > #bot {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+      }
+      div > #to {
+        position: absolute;
+        bottom: 1px;
+        left: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+    </ul>
+    <div style="position: relative">
+      <span id="top"></span>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eum
+        odit aperiam? Quas, illum nisi eaque minus repellendus enim asperiores
+        corrupti hic commodi nulla maiores, ea rerum officia aliquid cupiditate?
+        Id recusandae non, nemo animi distinctio minima voluptatibus dicta
+        commodi dolor. At nobis expedita provident aperiam vero recusandae ullam
+        quidem illum dolorem? Explicabo delectus quasi ab mollitia magnam
+        repellendus tenetur? Eos ipsam incidunt quo! Autem fuga unde consectetur
+        fugit, eveniet optio excepturi voluptatem quis doloribus, temporibus
+        perspiciatis sapiente neque reprehenderit amet voluptatibus quo
+        accusamus numquam doloremque. At quia totam aliquid.
+      </p>
+      <span id="bottom"></span>
+      <button id="bot"><a href="#bottom">but</a></button>
+      <button id="to"><a href="#top">top</a></button>
+    </div>
+  </body>
+</html>

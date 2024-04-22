@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 400px;
+        margin-bottom: 10px;
+        border: 1px dotted red;
+      }
+      div > p:nth-child(odd) {
+        color: blue;
+      }
+      div > p:nth-child(even) {
+        color: red;
+      }
+      div > p:nth-child(3n) {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>overflow 프로퍼티</h1>
+    <hr />
+    <div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  </body>
+</html>
