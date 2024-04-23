@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        width: 100px;
+        font-weight: 900;
+        text-align: center;
+      }
+      #result {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>구구단</h1>
+    <hr />
+
+    <script>
+      let dan = prompt("구구단", "원하는 단수를 입력");
+      document.write("<table>");
+      if (dan !== null) {
+        dan = parseInt(dan);
+        for (let i = 1; i < 10; i++) {
+          document.write(`<tr>
+                <td>${dan}X${i}=</td>
+                <td id = "result">${dan * i}</td>
+            </tr>`);
+        }
+      } else {
+        document.write("숫자로 입력");
+      }
+      document.write("</table>");
+    </script>
+  </body>
+</html>

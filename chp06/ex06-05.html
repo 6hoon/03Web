@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function kkk(message) {
+        document.write("hello");
+      }
+    </script>
+  </head>
+  <body>
+    <h3>document.write() 활용</h3>
+    <hr />
+    <script>
+      let name = prompt("name", "홍길동");
+      if (name === null) {
+        document.write(`<h2>이름을 입력하지 않았어요</h2>`);
+      } else if (name === "이승훈") {
+        document.write(`<h2> ${name}님 힘드시죠</h2>`);
+      } else {
+        document.write(`<h2> ${name}님 누구세요 </h2>`);
+      }
+      document.write("<br>");
+      document.write("<span>2 + 5 </span><br>");
+      document.write("<mark>7입니다.</mark>");
+      //confirm
+      let result = confirm("당신은 사람입니까");
+      if (result) {
+        document.write(`<h2> 아 좋아요. </h2>`);
+      } else {
+        document.write(`<h2> 미워요...흑 흑 흑 </h2>`);
+      }
+    </script>
+    <button type="button" onclick="kkk('사랑해!')">클릭</button>
+  </body>
+</html>

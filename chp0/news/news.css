@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+/* header */
+header {
+  border: 1px solid black;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+/*  */
+header > div.hLeft {
+  border: 1px dotted red;
+}
+
+/*  */
+header > div.hRight {
+  border: 1px dotted blue;
+}

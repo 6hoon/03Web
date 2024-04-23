@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      td {
+        border: 1px solid black;
+        padding: 5px;
+        width: 100px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>구구단</h1>
+    <hr />
+    <script>
+      let dan = prompt("구구단", "원하는 단 입력");
+      if (dan instanceof 0) {
+        dan = parseInt(dan);
+        document.write("<table>");
+        for (let i = 1; i < 10; i++) {
+          document.write(`<tr>
+          <td>${dan}X${i}=</td>
+          <td>${dan * i}</td>
+        </tr>`);
+        }
+        document.write("</table>");
+      } else {
+        document.write("숫자만 입력하시오");
+      }
+    </script>
+  </body>
+</html>
