@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>[]로 배열 만들기</h1>
+    <hr />
+    <script>
+      const array = new Array();
+      document.write("random 배열 만들기<br>");
+      let size = prompt("원하는 배열 사이즈 입력", "정수로");
+      if (size !== null) {
+        size = parseInt(size);
+        for (let i = 0; i < size; i++) {
+          array[i] = parseInt(Math.random() * (30 - 5 + 1) + 5);
+          //   document.write(`<span>array[${i}]=${array[i]}</span><br>`);
+        }
+        document.write("const array=[");
+        for (let i = 0; i < array.length; i++) {
+          i === array.length - 1
+            ? document.write(`${array[i]}`)
+            : document.write(`${array[i]}, `);
+        }
+        document.write(`]<br>`);
+
+        for (let i = 0; i < array.length; i++) {
+          let value = array[i];
+          for (let j = 0; j < value; j++) {
+            document.write(`*`);
+          }
+          document.write(`${value}<br>`);
+        }
+      } else {
+        document.write("올바르게 입력");
+      }
+    </script>
+  </body>
+</html>

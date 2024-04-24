@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+div {
+  display: flex;
+  width: 80%;
+  margin: 10px auto;
+  align-items: center;
+}
+p {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table tr {
+}
+table td {
+  padding: 10px 0;
+  border-bottom: 1px solid grey;
+}
+table td:first-child {
+  background-color: lightgrey;
+  text-align: center;
+  width: 20%;
+  border-right: 1px solid grey;
+}
+table td:last-child {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+#foot {
+  background-color: white;
+  border-right: 0;
+}

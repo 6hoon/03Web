@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function start() {
+        const date = new Date();
+        if (date.getSeconds() % 2 === 0) {
+          document.querySelector(`fieldset`).style.backgroundColor = "skyblue";
+        } else {
+          document.querySelector(`fieldset`).style.backgroundColor = "pink";
+        }
+        let clock = document.querySelector(`#clock`);
+        clock.innerHTML = `[현재 시각: ${date.getHours()}시 ${date.getMinutes()}분 ${date.getSeconds()}초]`;
+      }
+      function online() {
+        setInterval(start, 1000);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>짝수:하늘 / 홀수:분홍</h1>
+    <hr />
+    <fieldset style="margin: 0 auto; width: 60%; height: 20vh">
+      <legend>이벤트 실습</legend>
+      <span id="clock"></span>
+      <br />
+      <button
+        style="display: block; margin: 0 auto"
+        type="button"
+        onclick="start(),online()"
+      >
+        배경색/시간
+      </button>
+    </fieldset>
+  </body>
+</html>

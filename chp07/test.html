@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>랜덤배열 asterisk</h1>
+    <hr />
+    <script>
+      const array = new Array();
+      let size = prompt("배열의 사이즈 입력", "정수로");
+      if (size !== null) {
+        size = parseInt(size);
+        for (let i = 0; i < size; i++) {
+          array[i] = parseInt(Math.random() * (30 - 5 + 1) + 5);
+        }
+        document.write(`array = [`);
+        for (let i = 0; i < array.length; i++) {
+          i === array.length - 1
+            ? document.write(`${array[i]}]<br>`)
+            : document.write(`${array[i]}, `);
+        }
+        for (let i = 0; i < array.length; i++) {
+          let val = array[i];
+          while (val !== 0) {
+            document.write(`*`);
+            val--;
+          }
+          document.write(`${array[i]}<br>`);
+        }
+      } else {
+        document.write(`올바르게 입력`);
+      }
+    </script>
+  </body>
+</html>

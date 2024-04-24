@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function printArr(message, array) {
+        document.write(`${message} = [${array.toString()}]<br>`);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Array 객체의 method 활용</h1>
+    <hr />
+    <script>
+      const nameArr = new Array("김", "이", "박", "최", "황");
+      printArr("nameArr", nameArr);
+      //1.join
+      let joinArr = nameArr.join("$$");
+      document.write(`join = ${joinArr}<br>`);
+      //2.sort
+      let sortArr = nameArr.sort();
+      document.write(`sort = [${sortArr.toString()}]<br>`);
+      //3.reverse
+      let reverseArr = nameArr.reverse();
+      document.write(`reverse = [${reverseArr.toString()}]<br>`);
+      //4.slice
+      let sliceArr = nameArr.slice(2, 4);
+      document.write(`slice(index 2이상 4미만) = [${sliceArr.toString()}]<br>`);
+      //5.concat
+      const age = ["10", "20", "30"];
+      let concatArr = nameArr.concat(age);
+      document.write(`concat = [${concatArr.toString()}]<br>`);
+      printArr("concat", concatArr);
+      printArr("nameArr", nameArr);
+    </script>
+  </body>
+</html>

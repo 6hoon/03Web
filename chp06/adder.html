@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Bring an object
+      function calculator() {
+        const number1 = document.querySelector("#number1");
+        const number2 = document.querySelector("#number2");
+        const sum = document.querySelector("#sum");
+
+        sum.value = parseInt(number1.value) + parseInt(number2.value);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center">Function calculator</h1>
+    <hr />
+    <fieldset style="width: 400px; text-align: center; margin: 0 auto">
+      <legend>Calculator</legend>
+      <label for="number1">Type num1</label>
+      <input
+        type="text"
+        name="number1"
+        id="number1"
+        size="7"
+        placeholder="0"
+        maxlength="5"
+      />
+      <span>+</span>
+      <input
+        type="text"
+        name="number2"
+        id="number2"
+        size="7"
+        placeholder="0"
+        maxlength="5"
+      />
+      <span>=</span>
+      <input
+        type="text"
+        name="sum"
+        id="sum"
+        size="7"
+        readonly
+        placeholder="value"
+      />
+      <button type="button" onclick="calculator()">Do the math</button>
+    </fieldset>
+    <script>
+      let today = new Date();
+      document.write(today.toLocaleDateString());
+    </script>
+  </body>
+</html>

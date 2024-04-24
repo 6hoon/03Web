@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      fieldset {
+        width: 95%;
+        margin: 0 auto;
+      }
+      #top {
+        width: 80%;
+      }
+      #top > tbody {
+      }
+      #top td:first-child {
+        font-weight: 900;
+        text-align: center;
+      }
+
+      #bot {
+        width: 100%;
+        border: 1px solid black;
+      }
+      #bot > thead,
+      tfoot {
+        background-color: #ffa07a;
+        color: white;
+        font-weight: 900;
+        text-align: center;
+      }
+      #bot > tbody {
+        background-color: #ffffe0;
+        color: black;
+      }
+      #bot td {
+        border: 1px solid black;
+        font-size: 0.8em;
+      }
+      #bot td.title {
+        width: 60%;
+      }
+      #bot td button {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>포트폴리오 문제</h1>
+    <hr />
+    <fieldset>
+      <legend>공지사항 작성하기</legend>
+      <form action="#" method="post">
+        <table id="top">
+          <tbody>
+            <tr>
+              <td>제목</td>
+              <td>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="제목을 입력하시오"
+                  size="20"
+                  style="width: 500px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>내용</td>
+              <td>
+                <input
+                  type="text"
+                  name="content"
+                  id="content"
+                  placeholder="내용을 입력하시오"
+                  size="500"
+                  style="height: 200px; width: 500px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>첨부파일</td>
+              <td>
+                <input
+                  type="button"
+                  name="uploadFile"
+                  id="uploadFile"
+                  value="파일 선택"
+                />
+                <span>선택된 파일 없음</span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="submit">작성하기</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </fieldset>
+    <hr style="margin: 20px 0" />
+    <form action="#" method="post">
+      <table id="bot">
+        <thead>
+          <tr>
+            <td>번호</td>
+            <td colspan="2">제목</td>
+            <td>작성자</td>
+            <td>작성일</td>
+            <td>조회수</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>9</td>
+            <td class="title">공지사항 제목 9</td>
+            <td>
+              <button type="button">바로가기</button>
+            </td>
+            <td>user01</td>
+            <td>2021-03-29</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td class="title">공지사항 제목 6</td>
+            <td>
+              <button type="button">바로가기</button>
+            </td>
+            <td>answ445</td>
+            <td>2021-03-12</td>
+            <td>67</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="title">공지사항 제목 3</td>
+            <td>
+              <button type="button">바로가기</button>
+            </td>
+            <td>testg12</td>
+            <td>2021-03-01</td>
+            <td>98</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="title">공지사항 제목 2</td>
+            <td>
+              <button type="button">바로가기</button>
+            </td>
+            <td>palwe3</td>
+            <td>2021-01-02</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="title">공지사항 제목 1</td>
+            <td>
+              <button type="button">바로가기</button>
+            </td>
+            <td>xml23</td>
+            <td>2020-12-24</td>
+            <td>124</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">전체공지사항 갯수</td>
+            <td colspan="2">5개</td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  </body>
+</html>

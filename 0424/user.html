@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="userstyle.css" />
+  </head>
+  <body>
+    <h1>회원가입</h1>
+
+    <div>
+      <span style="color: red; font-size: xx-small">●</span>
+      <span>온라인 회원가입 작성</span>
+    </div>
+    <p>고객님의 정보는~</p>
+    <table>
+      <tr>
+        <td>
+          <div>
+            <span style="color: red; font-size: xx-small">●</span>
+            <span>사용자ID</span>
+          </div>
+        </td>
+        <td>
+          <input type="text" name="userID" id="userID" size="12" />
+          <button type="button">ID중복확인</button>
+        </td>
+      </tr>
+      <tr>
+        <td>비밀번호</td>
+        <td>
+          <input type="password" name="userPw" id="userPw" size="12" />
+          <span>*4~12자리~~~~</span>
+        </td>
+      </tr>
+      <tr>
+        <td>비밀번호 확인</td>
+        <td>
+          <input
+            type="password"
+            name="userPwCheck"
+            id="userPwCheck"
+            size="12"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>성명</td>
+        <td>
+          <input type="text" name="userName" id="userName" size="12" />
+          <span>*띄어쓰기</span>
+        </td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td>
+          <input type="email" name="userEmail" id="userEmail" size="30" />
+          <span style="font-weight: 900">메일 수신여부</span><br />
+          <span>할인 이벤트 정보~<br />비밀번호 분실시~</span>
+        </td>
+      </tr>
+      <tr>
+        <td>우편번호</td>
+        <td>
+          <input type="text" name="userAddNo1" id="userAddNo1" size="4" />
+          <span>&nbsp;-&nbsp;</span>
+          <input type="text" name="userAddNo2" id="userAddNo2" size="4" />
+          <button type="button">우편번호 검색</button>
+        </td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td>
+          <input
+            type="text"
+            name="userAddress1"
+            id="userAddress1"
+            size="50"
+          /><br />
+          <input type="text" name="userAddress2" id="userAddress2" size="50" />
+        </td>
+      </tr>
+      <tr>
+        <td>우편번호</td>
+        <td>
+          <input type="tel" name="userNum1" id="userNum1" size="3" />
+          <span>&nbsp;-&nbsp;</span>
+          <input type="tel" name="userNum2" id="userNum2" size="4" />
+          <span>&nbsp;-&nbsp;</span>
+          <input type="tel" name="userNum3" id="userNum3" size="4" />
+        </td>
+      </tr>
+      <tr>
+        <td id="foot" colspan="2">
+          <button type="submit">다음</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function change() {
+        const time = new Date();
+        let second = date.getSeconds();
+        let minute = date.getMinutes();
+        let hour = date.getHours();
+
+        if (time.getSeconds() % 2 === 0) {
+          //   document.body.style.backgroundColor = "skyblue";
+          document.querySelector(`fieldset`).style.backgroundColor = "skyblue";
+        } else {
+          // document.body.style.backgroundColor = "pink";
+          document.querySelector(`fieldset`).style.backgroundColor = "pink";
+        }
+        let clock = document.querySelector(`#clock`);
+        clock.innerHTML = `현재시각: ${hour}시 ${minute}분 ${second}초`;
+      }
+      function printTime() {
+        const clock = document.querySelector(`#clock`);
+        const date = new Date();
+        clock.innerHTML = `${date.getHours()}시:${date.getMinutes()}분:${date.getSeconds()}초`;
+        setInterval(printTime, 1000);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>짝수:하늘색/홀수:핑크</h1>
+    <hr />
+    <fieldset style="width: 60%; height: 60vh; margin: 0 auto">
+      <legend style="text-align: center">현재시간 보이기</legend>
+      <span id="clock"></span>
+      <br />
+      <button
+        style="display: block; margin: 0 auto"
+        type="button"
+        onclick="change()"
+      >
+        start
+      </button>
+    </fieldset>
+  </body>
+</html>
