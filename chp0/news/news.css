@@ -1,21 +1,344 @@
 body {
   margin: 0;
+  background-color: #f4f6f8;
+  position: relative;
 }
-
+a {
+  text-decoration: none;
+  font-size: 0.8em;
+}
+ul {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+}
+button:hover {
+  background-color: red;
+}
 /* header */
+#divHead {
+  width: 100%;
+  background-color: #3f63bf;
+}
 header {
   border: 1px solid black;
-  width: 60%;
+  width: 55%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-/*  */
+/* hLeft */
 header > div.hLeft {
   border: 1px dotted red;
+  display: flex;
+  align-items: center;
+}
+header a {
+  color: white;
+}
+header > div.hLeft a.naverLogo {
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+header > div.hLeft ul {
+  margin: 10px 0;
+}
+header > div.hLeft li {
+  border-left: 1px solid grey;
+  padding: 0 10px;
+}
+header > div.hLeft li:nth-child(1) {
+  border: 0;
+}
+header > div.hLeft h1 {
+  font-size: 1.2em;
+  margin: 0;
+}
+/* hRight */
+header > div.hRight {
+  border: 1px dotted pink;
+  display: flex;
+  align-items: center;
+}
+header > div.hRight button {
+  padding: 0 5px;
+  background-color: #496bc2;
+  border: 1px solid #3d5eb1;
 }
 
-/*  */
-header > div.hRight {
-  border: 1px dotted blue;
+header > div.hRight a.icon {
+  padding: 0 5px;
+  font-size: 1em;
+}
+
+/* nav */
+#divNav {
+  background-color: white;
+  border-bottom: 1px solid #ebebeb;
+}
+nav {
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  padding: 0;
+}
+nav a {
+  display: flex;
+  padding: 8px;
+  color: black;
+}
+nav li:first-child > a {
+  border-bottom: 3px solid #3f63bf;
+}
+
+/* main */
+main {
+  width: 100%;
+  position: relative;
+  background-color: #f4f6f8;
+}
+/* #mainMenu */
+main > #mainMenu {
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+main > #mainMenu > #today {
+  font-size: 0.8em;
+  font-weight: 900;
+}
+main > #mainMenu li {
+  margin: 10px 0;
+  padding: 0 8px;
+  border-right: 1px solid grey;
+}
+main > #mainMenu li:last-child {
+  border: 0;
+}
+main > #mainMenu li > a {
+  color: black;
+}
+/* mainContent */
+main > #mainContent {
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid pink;
+  justify-content: space-between;
+}
+main > #mainContent > section {
+  display: flex;
+  width: 32%;
+  flex-direction: column;
+  border: 1px dotted black;
+  align-content: space-between;
+}
+
+/* article */
+main > #mainContent article {
+  /* border: 1px solid #eff0f2; */
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px 0;
+  background-color: white;
+}
+main > #mainContent article.row {
+  display: flex;
+}
+main > #mainContent article.column {
+  display: flex;
+  flex-direction: column;
+}
+main > #mainContent article.column div.article {
+  width: 95%;
+  margin: 10px auto;
+  height: 160px;
+  border-bottom: 1px solid #efeff0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#mainContent article.column div.title {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main > #mainContent article.column > div.article:last-child {
+  border: 0;
+}
+main > #mainContent img.newsLogo {
+  width: 50px;
+  height: 50px;
+}
+main > #mainContent div.title > div {
+  display: flex;
+  align-items: center;
+}
+main > #mainContent div.title span {
+  padding: 0 3px;
+}
+main > #mainContent div.title span.news {
+  font-size: 1em;
+  font-weight: 900;
+}
+main > #mainContent div.title span.newsDate {
+  font-size: 0.7em;
+}
+main > #mainContent div.title > button {
+  border: 1px solid #4978f4;
+  border-radius: 5px;
+  background-color: white;
+  color: #4978f4;
+}
+#mainContent div.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#mainContent div.content > img {
+  width: 120px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+#mainContent div.content span:first-child {
+  font-size: 0.8em;
+  font-weight: 900;
+}
+#mainContent div.content span:last-child {
+  font-size: 0.7em;
+}
+#mainContent article button.reset {
+  width: 40%;
+  height: 40px;
+  border: 1px solid lightgrey;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+#mainContent article div.reporterList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+#mainContent article div.reporter {
+  width: 45%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid lightgrey;
+  padding-top: 0;
+  border-radius: 10px;
+  position: relative;
+  margin: 5px 0;
+  background-image: url(../media/caster/koo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#mainContent article div.reporter span:first-child {
+  font-size: 0.8em;
+  font-weight: 900;
+}
+#mainContent article div.reporter span:last-child {
+  font-size: 0.7em;
+}
+
+#mainContent article div.reporter > img.profile {
+  width: 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 7%;
+  top: 35%;
+}
+#mainContent article div.reporter > div.reporterEx {
+  margin: 0 auto;
+  margin-top: 68%;
+  width: 80%;
+}
+#mainContent article div.reporter > button {
+  border: 0;
+  background-color: white;
+  border-radius: 0;
+  border-top: 1px solid lightgrey;
+  padding: 2px 0;
+}
+#mainContent article button.more {
+  width: 80%;
+  height: 40px;
+  border: 1px solid lightgrey;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  margin: 20px 0;
+}
+footer > div.borderbox {
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+footer #notice {
+  width: 55%;
+  margin: 12px auto;
+  font-size: 0.9em;
+}
+footer #notice > a {
+  color: grey;
+}
+footer #foot {
+  width: 55%;
+  margin: 20px auto 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer #foot > div {
+  margin: 10px 0;
+  color: grey;
+}
+footer #foot > div:first-child > a {
+  font-size: 1em;
+  padding: 0 10px;
+  color: grey;
+}
+footer #foot > div:nth-child(2) > a {
+  font-size: 0.8em;
+  color: grey;
+  padding: 0 10px;
+  border-right: 1px solid grey;
+}
+footer #foot > div:nth-child(2) > a:last-child {
+  border: 0;
+  border-left: 1px solid grey;
+}
+footer #foot > span {
+  font-size: 0.8em;
+  color: grey;
+}
+#up {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+#up > i {
+  font-size: 2em;
+  color: red;
 }

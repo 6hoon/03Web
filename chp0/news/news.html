@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,40 +9,298 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="news.css" />
+    <script>
+      function today() {
+        const date = new Date();
+        const today = document.querySelector("#today");
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const dayNum = date.getDay();
+        const dayArr = ["일", "월", "화", "수", "목", "금", "토"];
+        today.innerHTML = `${month}.${day}(${dayArr[dayNum]})`;
+      }
+    </script>
   </head>
   <body>
+    <a id="up" href="news.html"
+      ><i class="fa-solid fa-arrow-up-from-bracket"></i
+    ></a>
     <!-- header -->
-    <header>
-      <!-- div.hLeft -->
-      <div class="hLeft">
-        <a class="naverLogo" href="http://naver.com"
-          ><i class="fa-solid fa-n logo"></i
-        ></a>
-        <ul>
-          <li>
-            <a href=""><h1>뉴스</h1></a>
-          </li>
-          <li><a href="">연예</a></li>
-          <li><a href="">스포츠</a></li>
-          <li><a href="">프리미엄</a></li>
-        </ul>
-      </div>
-      <!-- div.hRight -->
-      <div class="hRight">
-        <button>
-          <a href="http://naver.com">로그인</a>
-        </button>
-        <a href="http://naver.com"><i class="fa-solid fa-bars"></i></a>
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-      </div>
-    </header>
+    <div id="divHead">
+      <header>
+        <!-- div.hLeft -->
+        <div class="hLeft">
+          <a class="naverLogo" href="http://naver.com"
+            ><i class="fa-solid fa-n logo"></i
+          ></a>
+          <ul>
+            <li>
+              <a href="https://news.naver.com/"><h1>뉴스</h1></a>
+            </li>
+            <li><a href="https://entertain.naver.com/home">연예</a></li>
+            <li><a href="https://sports.news.naver.com/index">스포츠</a></li>
+            <li><a href="https://weather.naver.com/">날씨</a></li>
+            <li><a href="https://contents.premium.naver.com/">프리미엄</a></li>
+          </ul>
+        </div>
+        <!-- div.hRight -->
+        <div class="hRight">
+          <button>
+            <a href="https://nid.naver.com/nidlogin.login">로그인</a>
+          </button>
+          <a class="icon" href="#"><i class="fa-solid fa-bars"></i></a>
+          <a class="icon" href="#"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+        </div>
+      </header>
+    </div>
 
     <!-- nav -->
-    <nav></nav>
-
+    <div id="divNav">
+      <nav>
+        <ul>
+          <li><a class="line" href="">언론사별</a></li>
+          <li><a href="">정치</a></li>
+          <li><a href="">경제</a></li>
+          <li><a href="">사회</a></li>
+          <li><a href="">생활/문화</a></li>
+          <li><a href="">IT/과학</a></li>
+          <li><a href="">세계</a></li>
+          <li><a href="">랭킹</a></li>
+          <li><a href="">신문보기</a></li>
+          <li><a href="">오피니언</a></li>
+          <li><a href="">TV</a></li>
+          <li><a href="">팩트체크</a></li>
+          <li><a href="">알고리즘 안내</a></li>
+          <li><a href="">정정보도 모음</a></li>
+        </ul>
+      </nav>
+    </div>
     <!-- main -->
-    <main></main>
+    <main>
+      <div id="mainMenu">
+        <span id="today"></span>
+        <script>
+          today();
+        </script>
+        <ul>
+          <li><a href="#">전체 언론사</a></li>
+          <li><a href="#">뉴스스탠드</a></li>
+          <li><a href="#">라이브러리</a></li>
+        </ul>
+      </div>
+      <div id="mainContent">
+        <section>
+          <article class="row">
+            <span>언론사편집</span>
+            <a href="">기자</a>
+            <a href="">연재</a>
+            <a href="">구독설정</a>
+          </article>
+          <article class="column">
+            <div class="article">
+              <div class="title">
+                <div>
+                  <img class="newsLogo" src="../media/1kbilbo.png" alt="" />
+                  <span class="news">국민일보</span>
+                  <span class="newsDate">04월 25일 00:21</span>
+                </div>
+                <button class="subscirbe" type="button">+ 구독</button>
+              </div>
+              <div class="content">
+                <img src="../media/1kbilbo_in.jpg" alt="" />
+                <div>
+                  <span
+                    >"술로 견뎠는데...이제 끝이보여" 어느 신혼부부의
+                    '전...</span
+                  >
+                  <span
+                    >전세사기를 당한 신혼부부가 올린 '전세사기 후기 글'이
+                    온...</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="article">
+              <div class="title">
+                <div>
+                  <img class="newsLogo" src="../media/1kbilbo.png" alt="" />
+                  <span class="news">국민일보</span>
+                  <span class="newsDate">04월 25일 00:21</span>
+                </div>
+                <button class="subscirbe" type="button">+ 구독</button>
+              </div>
+              <div class="content">
+                <img src="../media/1kbilbo_in.jpg" alt="" />
+                <div>
+                  <span
+                    >"술로 견뎠는데...이제 끝이보여" 어느 신혼부부의
+                    '전...</span
+                  >
+                  <span
+                    >전세사기를 당한 신혼부부가 올린 '전세사기 후기 글'이
+                    온...</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="article">
+              <div class="title">
+                <div>
+                  <img class="newsLogo" src="../media/1kbilbo.png" alt="" />
+                  <span class="news">국민일보</span>
+                  <span class="newsDate">04월 25일 00:21</span>
+                </div>
+                <button class="subscirbe" type="button">+ 구독</button>
+              </div>
+              <div class="content">
+                <img src="../media/1kbilbo_in.jpg" alt="" />
+                <div>
+                  <span
+                    >"술로 견뎠는데...이제 끝이보여" 어느 신혼부부의
+                    '전...</span
+                  >
+                  <span
+                    >전세사기를 당한 신혼부부가 올린 '전세사기 후기 글'이
+                    온...</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="article">
+              <div class="title">
+                <div>
+                  <img class="newsLogo" src="../media/1kbilbo.png" alt="" />
+                  <span class="news">국민일보</span>
+                  <span class="newsDate">04월 25일 00:21</span>
+                </div>
+                <button class="subscirbe" type="button">+ 구독</button>
+              </div>
+              <div class="content">
+                <img src="../media/1kbilbo_in.jpg" alt="" />
+                <div>
+                  <span
+                    >"술로 견뎠는데...이제 끝이보여" 어느 신혼부부의
+                    '전...</span
+                  >
+                  <span
+                    >전세사기를 당한 신혼부부가 올린 '전세사기 후기 글'이
+                    온...</span
+                  >
+                </div>
+              </div>
+            </div>
+            <button class="reset">
+              <i class="fa-solid fa-rotate"></i>&nbsp;새로보기
+            </button>
+          </article>
+          <article class="column">
+            <div style="height: 550px" class="article">
+              <div class="title">
+                <div>
+                  <span>기자를 구독해보세요</span>
+                  <a style="color: grey" href=""
+                    ><i class="fa-regular fa-circle-question"></i
+                  ></a>
+                </div>
+                <a style="color: grey" href="#">전체보기&gt;&nbsp;</a>
+              </div>
+              <div class="reporterList">
+                <div class="reporter">
+                  <img
+                    class="profile"
+                    src="../media/caster/kooprofile.jpg"
+                    alt=""
+                  />
+                  <div class="reporterEx">
+                    <span>구본혁 기자</span>
+                    <br />
+                    <span>"우리가 알던 고정 관념 깨졌다" 세계...</span>
+                  </div>
+                  <button type="button">+ 구독</button>
+                </div>
+                <div class="reporter">
+                  <img
+                    class="profile"
+                    src="../media/caster/kooprofile.jpg"
+                    alt=""
+                  />
+                  <div class="reporterEx">
+                    <span>구본혁 기자</span>
+                    <br />
+                    <span>"우리가 알던 고정 관념 깨졌다" 세계...</span>
+                  </div>
+                  <button type="button">+ 구독</button>
+                </div>
+                <div class="reporter">
+                  <img
+                    class="profile"
+                    src="../media/caster/kooprofile.jpg"
+                    alt=""
+                  />
+                  <div class="reporterEx">
+                    <span>구본혁 기자</span>
+                    <br />
+                    <span>"우리가 알던 고정 관념 깨졌다" 세계...</span>
+                  </div>
+                  <button type="button">+ 구독</button>
+                </div>
+                <div class="reporter">
+                  <img
+                    class="profile"
+                    src="../media/caster/kooprofile.jpg"
+                    alt=""
+                  />
+                  <div class="reporterEx">
+                    <span>구본혁 기자</span>
+                    <br />
+                    <span>"우리가 알던 고정 관념 깨졌다" 세계...</span>
+                  </div>
+                  <button type="button">+ 구독</button>
+                </div>
+              </div>
+              <button class="more">
+                <i class="fa-solid fa-rotate"></i>&nbsp;기자 더보기 1 / 5
+              </button>
+            </div>
+          </article>
+        </section>
+        <section>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+        <section>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+      </div>
+    </main>
 
     <!-- footer -->
+    <footer>
+      <div class="borderbox">
+        <div id="notice">
+          <i class="fa-solid fa-bullhorn"></i>
+          <a href="">선거 관련 허위 댓글 신고 기능 적용 안내</a>
+        </div>
+      </div>
+      <div id="foot">
+        <div>
+          <a href="">로그인</a>
+          <span>|</span>
+          <a href="">전체서비스</a>
+        </div>
+        <div>
+          <a href="">이용약관</a>
+          <a href=""><b>개인정보처리방침</b></a>
+          <span>청소년 보호 책임자 : 이정규</span>
+          <a href="">서비스안내</a>
+        </div>
+        <span>각 언론사가 직접 콘텐츠를 편집합니다.</span>
+      </div>
+    </footer>
   </body>
 </html>
