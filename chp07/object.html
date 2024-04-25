@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>new Object()</h1>
+    <hr />
+    <script>
+      const literalobj = {
+        name: `황기태`,
+        code: 111,
+        ammount: 35000,
+        deposit: function (money) {
+          this.ammount += money;
+        },
+        withdraw: function (money) {
+          this.ammount -= money;
+        },
+        inquiry: function () {
+          return this.ammount;
+        },
+      };
+
+      const obj = new Object();
+      obj.name = "lee";
+      obj.code = 123;
+      obj.ammount = 20000;
+      obj.deposit = function (money) {
+        this.ammount += money;
+      };
+      obj.withdraw = function (money) {
+        this.ammount -= money;
+      };
+      obj.inquiry = function () {
+        return obj.ammount;
+      };
+
+      document.write(
+        `<span>name = ${obj.name} code = ${obj.code} amount=${obj.amount}<span><br>`
+      );
+      document.write(
+        `<span>obj.deposit(1000) = ${obj.deposit(1000)} amount=${
+          obj.amount
+        }<span><br>`
+      );
+      document.write(
+        `<span>obj.withdraw(1000) = ${obj.withdrow(1000)} amount=${
+          obj.amount
+        }<span><br>`
+      );
+      document.write(
+        `<span>obj.inquiry() = ${obj.inquiry()} amount=${obj.amount}<span><br>`
+      );
+      document.write(`<hr>`);
+      document.write(
+        `<span>name = ${literalobj.name} code = ${literalobj.code} amount=${literalobj.amount}<span><br>`
+      );
+      document.write(
+        `<span>obj.deposit(1000) = ${literalobj.deposit(1000)} amount=${
+          literalobj.amount
+        }<span><br>`
+      );
+      document.write(
+        `<span>obj.withdraw(1000) = ${literalobj.withdrow(1000)} amount=${
+          literalobj.amount
+        }<span><br>`
+      );
+      document.write(
+        `<span>obj.inquiry() = ${literalobj.inquiry()} amount=${
+          literalobj.amount
+        }<span><br>`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function change() {
+        const spanArray = document.getElementsByTagName(`span`);
+        for (let i = 0; i < spanArray.length; i++) {
+          if (i === 2) {
+            spanArray[i].style.display = `none`;
+          } else {
+            spanArray[i].style.color = `red`;
+            spanArray[i].style.fontSize = `${i * 5 + 10}px`;
+            spanArray[i].style.border = `1px solid black`;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="display: inline-block">과일</h1>
+    <button type="button" onclick="change()">누르세요</button>
+    <hr />
+    <p>
+      Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. Sint
+      at animi hic quod provident nemo vitae <span>dolor</span> fuga unde fugit
+      delectus <span>dolor</span> blanditiis iure omnis nobis deleniti, sapiente
+      quibusdam facilis <span>dolor</span> libero repellendus?
+    </p>
+  </body>
+</html>

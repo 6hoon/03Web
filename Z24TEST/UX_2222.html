@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: skyblue;
+      }
+      form {
+        background-color: white;
+        padding: 20px;
+        width: 50%;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        display: inline-block;
+        width: 30%;
+      }
+      input {
+        border: 0;
+        border-bottom: 1px dotted black;
+      }
+      div.row {
+        display: flex;
+        padding: 20px 0;
+      }
+      button {
+        width: 80%;
+        margin: 0 auto;
+        height: 40px;
+      }
+    </style>
+    <script>
+      function checkId() {
+        const userId = document.querySelector(`#userId`);
+        const idMsg = document.querySelector(`#idMsg`);
+        if (userId.value === "") {
+          idMsg.innerHTML = `필수 입력항목입니다`;
+          return false;
+        } else {
+          idMsg.innerHTML = null;
+          return true;
+        }
+      }
+
+      function checkPw(state) {
+        const userPw = document.querySelector(`#userPw`);
+        const pwMsg = document.querySelector(`#pwMsg`);
+        if (state === "blur") {
+          if (userPw.value === "") {
+            pwMsg.innerHTML = `필수 입력항목입니다`;
+            return false;
+          } else {
+            pwMsg.innerHTML = null;
+            return true;
+          }
+        } else if (state === "focus") {
+          pwMsg.innerHTML = `8~32자`;
+          return false;
+        }
+      }
+      function okPw(state) {
+        const userPw = document.querySelector(`#userPw`);
+        const userPwCheck = document.querySelector(`#userPwCheck`);
+        const pwCheckMsg = document.querySelector(`#pwCheckMsg`);
+        if (state === "blur") {
+          if (userPwCheck.value === "") {
+            pwCheckMsg.innerHTML = `필수 입력항목입니다`;
+            return false;
+          } else if (userPwCheck.value === userPw.value) {
+            pwCheckMsg.innerHTML = `일치`;
+            return true;
+          } else {
+            pwCheckMsg.innerHTML = `불일치`;
+            alert(`페이지 새로고침`);
+            location.reload(true);
+            return false;
+          }
+        } else if (state === "focus") {
+          pwCheckMsg.innerHTML = `비밀번호 확인`;
+          return false;
+        }
+      }
+
+      //실전 예시 - 이름을 입력할때마다 계속 점검 -
+      function checkName() {
+        const userName = document.querySelector(`#userName`);
+        const nameMsg = document.querySelector(`#nameMsg`);
+        //한글 2~4문자, 영문자 2~10문자(firstname lastname)
+        let nameExp = /^[가-힣]{2,4}$/;
+        if (!userName.value.match(nameExp)) {
+          nameMsg.innerHTML = `한글 2~4자 입력`;
+          return false;
+        } else if (userName.value === "") {
+          nameMsg.innerHTML = `이름을 공백으로 입력하지 마시오`;
+          return false;
+        } else {
+          nameMsg.innerHTML = `ok`;
+          return true;
+        }
+      }
+
+      //email
+      function checkEmail() {
+        const userEmail = document.querySelector(`#userEmail`);
+        const emailMsg = document.querySelector(`#emailMsg`);
+        //한글 2~4문자, 영문자 2~10문자(firstname lastname)
+        let emailExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        ///i -> 대소문자 가리지 마라
+        if (!userEmail.value.match(emailExp)) {
+          emailMsg.innerHTML = `이메일 형식에 맞게 입력바람`;
+          return false;
+        } else if (userEmail.value === "") {
+          emailMsg.innerHTML = `이메일을 공백으로 입력하지 마시오`;
+          return false;
+        } else {
+          emailMsg.innerHTML = `ok`;
+          return true;
+        }
+      }
+      // 모든 event 속성을 확인하고 이상이 없으면 서버로 전송한다.
+      // 이상이 있으면 경고창을 주고 전송버튼의 이벤트 기능을 막는다(전송: 서버로 전송하는 기능)
+      function checkAll(event) {
+        if (
+          checkId() &&
+          checkPw(`blur`) &&
+          okPw(`blur`) &&
+          checkName() &&
+          checkEmail()
+        ) {
+          alert(`가입 완료`);
+          return true;
+        } else {
+          alert(`입력정보 점검바람`);
+          event.preventDefault();
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="insertMember.jsp" method="post">
+      <div class="row">
+        <label for="userId">아이디</label>
+        <div>
+          <input
+            type="text"
+            name="userId"
+            id="userId"
+            onblur="checkId()"
+            required
+          /><br />
+          <span id="idMsg" style="color: red"></span>
+        </div>
+      </div>
+      <div class="row">
+        <label for="userPw">패스워드</label>
+        <div>
+          <input
+            type="password"
+            name="userPw"
+            id="userPw"
+            onblur="checkPw(`blur`)"
+            onfocus="checkPw(`focus`)"
+            required
+          /><br />
+          <span id="pwMsg" style="color: red"></span>
+        </div>
+      </div>
+      <div class="row">
+        <label for="userPwCheck">패스워드 확인</label>
+        <div>
+          <input
+            type="password"
+            name="userPwCheck"
+            id="userPwCheck"
+            required
+            onfocus="okPw(`focus`)"
+            onblur="okPw(`blur`)"
+          /><br />
+          <span style="color: red" id="pwCheckMsg"></span>
+        </div>
+      </div>
+
+      <!-- 실전 -->
+      <div class="row">
+        <label for="userName">이름</label>
+        <div>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            onkeyup="checkName()"
+            required
+          /><br />
+          <span id="nameMsg" style="color: red"></span>
+        </div>
+      </div>
+      <!-- 이메일 -->
+      <div class="row">
+        <label for="userEmail">이메일</label>
+        <div>
+          <input
+            type="email"
+            name="userEmail"
+            id="userEmail"
+            onkeyup="checkEmail()"
+          />
+          <br />
+          <span id="emailMsg" style="color: red"></span>
+        </div>
+      </div>
+
+      <!-- checkAll(event) -> 모든 event 속성을 가져옴 -->
+      <button type="submit" onclick="checkAll(event)">가입</button>
+    </form>
+  </body>
+</html>

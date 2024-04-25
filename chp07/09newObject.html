@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>new object</h1>
+    <hr />
+    <script>
+      // 리터럴 객체
+      const literalUserObj = {
+        name: "황기태",
+        code: 111,
+        amount: 35000,
+        deposit: function (money) {
+          this.amount += money;
+        },
+        withdrow: function (money) {
+          this.withdrow -= money;
+        },
+        inquiry: function (money) {
+          return this.amount;
+        },
+      };
+      // new object 객체
+      const obj = new Object();
+      obj.name = "kdj";
+      obj.code = 123;
+      obj.amount = 20000;
+      obj.deposit = function (money) {
+        this.amount += money;
+      };
+      obj.withdrow = function (money) {
+        this.amount -= money;
+      };
+      obj.inquiry = function () {
+        return this.amount;
+      };
+      //prototype 으로 객체 만들기(java)
+      function Bank(name, code, amount) {
+        this.name = name;
+        this.code = code;
+        this.amount = amount;
+        this.deposit = function (money) {
+          this.amount += money;
+        };
+        this.withdrow = function (money) {
+          this.amount -= money;
+        };
+        this.inquiry = function (money) {
+          return this.amount;
+        };
+        this.printBank = function () {
+          document.write(
+            `name = ${this.name} code = ${this.code} account = ${this.amount}`
+          );
+        };
+      }
+      const bank1 = new Bank(lee, 1234, 10000);
+      bank1.printBank();
+
+      // 출력
+      // document.write(
+      //   `<span>name = ${obj.name} code = ${obj.code} amount=${obj.amount}<span><br>`
+      // );
+      // document.write(
+      //   `<span>obj.deposit(1000) = ${obj.deposit(1000)} amount=${
+      //     obj.amount
+      //   }<span><br>`
+      // );
+      // document.write(
+      //   `<span>obj.withdraw(1000) = ${obj.withdrow(1000)} amount=${
+      //     obj.amount
+      //   }<span><br>`
+      // );
+      // document.write(
+      //   `<span>obj.inquiry() = ${obj.inquiry()} amount=${obj.amount}<span><br>`
+      // );
+      // document.write(`<hr>`);
+      // document.write(
+      //   `<span>name = ${literalUserObj.name} code = ${literalUserObj.code} amount=${literalUserObj.amount}<span><br>`
+      // );
+      // document.write(
+      //   `<span>obj.deposit(1000) = ${literalUserObj.deposit(1000)} amount=${
+      //     literalUserObj.amount
+      //   }<span><br>`
+      // );
+      // document.write(
+      //   `<span>obj.withdraw(1000) = ${literalUserObj.withdrow(1000)} amount=${
+      //     literalUserObj.amount
+      //   }<span><br>`
+      // );
+      // document.write(
+      //   `<span>obj.inquiry() = ${literalUserObj.inquiry()} amount=${
+      //     literalUserObj.amount
+      //   }<span><br>`
+      // );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function changeColorRed(obj, size, color) {
+        obj.style.color = color;
+        obj.style.fontSize = size;
+      }
+      function changeColorBlue(obj, size, color) {
+        obj.style.color = color;
+        obj.style.fontSize = size;
+      }
+      function changeSize(size) {
+        if (size === "smaller") {
+          document.querySelector(`p`).style.fontSize = size;
+        } else {
+          document.querySelector(`#line`).style.fontSize = size;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>this 활용</h1>
+    <hr />
+
+    <button type="button" onclick="changeColorRed(this,'30px','red')">
+      버튼1
+    </button>
+    <button type="button" onclick="changeColorBlue(this,`30px`,`blue`)">
+      버튼2
+    </button>
+    <br />
+    <hr />
+    <p id="line">크기 변경</p>
+    <button type="button" onclick="changeSize(`smaller`)">-</button>
+    <button type="button" onclick="changeSize(`larger`)">+</button>
+  </body>
+</html>
