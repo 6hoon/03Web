@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let win = null;
+      function createWindow() {
+        let content = document.querySelector(`#content`);
+        if (win === null) {
+          win = window.open("", "_blank", "");
+        }
+        win.document.open();
+        win.document.write(content.value);
+        win.document.close();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>HTML 문서 작성기 만들기</h1>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nobis
+      recusandae ab similique reprehenderit vero, facere repudiandae quos
+      aspernatur expedita.
+    </p>
+    <form action="#" method="post">
+      <textarea name="content" id="content" cols="30" rows="10"></textarea>
+      <button type="button" onclick="createWindow()">html 문서 출력하기</button>
+    </form>
+  </body>
+</html>

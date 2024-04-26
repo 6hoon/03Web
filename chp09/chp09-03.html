@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 해당되는 객체참조변수를 선언
+      let pl = null,
+        h1l = null,
+        hrl = null;
+      function init() {
+        // 객체참조변수 등록 / 객체참조저장
+        pl = document.querySelector(`#pl`);
+        h1l = document.querySelector(`#h1l`);
+        hr1 = document.querySelector(`#hrl`);
+        // 이벤트 등록 -> onmouseover는 핸들러 , mouseover가 이벤트 발생을 알리는 함수
+        // react에서 하는 방법
+        pl.addEventListener(
+          "mouseover",
+          () => (pl.style.backgroundColor = `orchid`)
+        );
+        pl.addEventListener(
+          "mouseout",
+          () => (pl.style.backgroundColor = `white`)
+        );
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1 id="h1l">addEventListener()를 이용한 리스너 등록</h1>
+    <hr id="hrl" />
+    <p id="pl">마우스를 올리면 orchid 색으로 변경</p>
+  </body>
+</html>

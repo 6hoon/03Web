@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naverJoin</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- javaScript -->
+    <script src="js/naverJoin.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/naverJoin.css">
+    <!-- fontAwesome -->
+    <script src="https://kit.fontawesome.com/3096a27d00.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="sizeChange()" onresize="sizeChange()">
+    <div class="screenSize">
+        <span id="containerWidth">width=</span>
+        <span id="containerHight">hight=</span>
+    </div>
+    <div id="container" class="w-100">
+        <div id="inner">
+            <div id="logoDiv">
+                <h1 id="logo">NAVER</h1>
+            </div>
+            <div id="formD">
+                <form action="" name="form1" onsubmit="doSubmit(); return false;">
+                    <div id="realNameDiv" class="text-end">
+                        <label for="realName">실명 인증된 아이디로 가입
+                            <i id="realNameCheck" class="fa-regular fa-circle-check" style="color: #b8b8b8;"></i>
+                        </label>
+                        <input type="checkbox" value="realName" id="realName" onclick="realNamecheck()"
+                            style="display: none;">
+                    </div>
+                    <div id="idPwEmailDiv">
+                        <table id="idPwEmailTable">
+                            <tr id="inputIdTr" class="input">
+                                <td><i class="icon fa-regular fa-user"></i></td>
+                                <td><input type="text" value="" name="inputId" id="inputId" placeholder="아이디"
+                                        onfocus="inputFocusTb(id)" onblur="idCheck(id)"></td>
+                                <td colspan="2">
+                                    <span class="rightEnd">@naver.com</span>
+                                </td>
+                            </tr>
+                            <tr id="inputPwTr">
+                                <td><i class="icon fa-solid fa-lock"></i></td>
+                                <td><input class="input" type="password" value="" id="inputPw" placeholder="비밀번호"
+                                        onfocus="inputFocusTb(id)" onblur="pwCheck(id)"></td>
+                                <td><span class="error" id="pwNo"></span></td>
+                                <td class="rightEnd" id="pwEye"><i class="icon fa-solid fa-eye" onclick="pwView()"></i>
+                                </td>
+
+                            </tr>
+                            <tr id="inputEmailTr">
+                                <td><i class="icon fa-regular fa-envelope"></i></td>
+                                <td colspan="3"><input class="input" type="email" value="" id="inputEmail"
+                                        placeholder="[선택] 비밀번호 분실 시 확인용 이메일" onfocus="inputFocusTb(id)"
+                                        onblur="emailCheck(id)"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="errorBox">
+                        <div class="error" id="inputIdError"></div>
+                        <div class="error" id="inputPwError"></div>
+                        <div class="error" id="inputEmailError"></div>
+                    </div>
+                    <div id="nameBirthTelDiv">
+                        <div id="nameBirthTelDivInner">
+                            <div id="inputNameDiv" class="input">
+                                <i class="icon2 fa-regular fa-user"></i>
+                                <input type="text" value="" name="inputName" id="inputName" placeholder="이름"
+                                    onfocus="inputFocusDv(id)" onblur="nameCheck(id)">
+                            </div>
+                            <div id="inputBirthDiv" class="input">
+                                <i class="icon2 fa-solid fa-cake-candles"></i>
+                                <input type="text" value="" name="inputBirth" id="inputBirth" placeholder="생년월일 8자리"
+                                    onfocus="inputFocusDv(id)" onblur="birthCheck(id)">
+                            </div>
+                            <div id="selectTelCompanyDiv" style="display: none;">
+                                <i class="icon2 fa-solid fa-globe"></i>
+                                <select name="inputglobalTel" id="inputglobalTel">
+                                    <option value="">통신사 선택</option>
+                                    <option value="skt">SKT</option>
+                                    <option value="kt">KT</option>
+                                    <option value="lg">LG U+</option>
+                                </select>
+
+                            </div>
+                            <div id="inputGenderDiv" class="input">
+                                <div id="genderMDiv" for="genderM">
+                                    <label for="genderM">남자</label>
+                                    <input type="radio" value="M" name="inputGender" id="genderM"
+                                        onclick="genderCheck()">
+                                </div>
+                                <div id="genderWDiv">
+                                    <label for="genderW">여자</label>
+                                    <input type="radio" value="W" name="inputGender" id="genderW"
+                                        onclick="genderCheck()">
+                                </div>
+                                <div id="genderNDiv">
+                                    <label for="genderN">선택안함</label>
+                                    <input type="radio" value="N" name="inputGender" id="genderN"
+                                        onclick="genderCheck()">
+                                </div>
+                            </div>
+                            <div id="inputGlobalTelDiv" class="input">
+                                <i class="icon2 fa-solid fa-globe"></i>
+                                <select name="inputglobalTel" id="inputglobalTel">
+                                    <option value="korTel">대한민국 +82</option>
+                                    <option value="dnkTel">덴마크 +45</option>
+                                    <option value="nicTel">니카라과 +505</option>
+                                </select>
+                            </div>
+                            <div id="inputTelDiv" class="input">
+                                <i class="icon2 fa-solid fa-mobile-screen"></i>
+                                <input type="text" value="" name="inputTel" id="inputTel" placeholder="휴대전화번호"
+                                    onfocus="inputFocusDv(id)" onblur="telCheck(id)">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="allConfimDiv" class="allConfimDiv G" style="display: none;">
+                        <label for="allConfim"><i id="allConfimCheck" class="fa-regular fa-circle-check"
+                                style="color: #b8b8b8;"></i>
+                            <span id="fontGreen">[필수]</span>
+                            <span>인증 약관 전체 동의</span>
+                        </label>
+                        <input type="checkbox" value="allConfim" id="allConfim" onclick="allConfimcheck()"
+                            style="display: none;">
+                    </div>
+                    <div id="errorBox">
+                        <div class="error" id="inputNameError"></div>
+                        <div class="error" id="inputBirthError"></div>
+                        <div class="error" id="inputGenderError"></div>
+                        <div class="error" id="inputTelError"></div>
+                        <div class="error" id="allConfimError"></div>
+                    </div>
+                    <div id="submitDiv">
+                        <input type="submit" name="button" id="submit" value="인증요청">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

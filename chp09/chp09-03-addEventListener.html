@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let hC = null;
+      function init() {
+        hC = document.querySelector(`#hC`);
+        hC.addEventListener("mouseover", () => {
+          hC.style.backgroundColor = `black`;
+          hC.style.color = `white`;
+        });
+        hC.addEventListener("mouseout", () => {
+          hC.style.backgroundColor = `white`;
+          hC.style.color = `black`;
+        });
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1>addEventListener()등록</h1>
+    <hr />
+    <h2 id="hC" style="text-align: center">Event</h2>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function create() {
+        const parent = document.querySelector(`#parent`);
+        const div = document.createElement(`div`);
+        div.innerHTML = `<span>누르면 배경색 변경</span>`;
+        div.setAttribute("id", "myDiv");
+        div.style.margin = `0 auto`;
+        div.style.width = `50%`;
+        div.style.height = `30vh`;
+        div.style.borderRadius = `10px`;
+        div.style.color = `orange`;
+        div.firstChild;
+        div.style.backgroundColor = `olive`;
+        parent.appendChild(div);
+        div.onclick = function () {
+          if (this.style.backgroundColor === `black`) {
+            this.style.backgroundColor = `olive`;
+          } else {
+            this.style.backgroundColor = `black`;
+          }
+        };
+      }
+    </script>
+  </head>
+  <body id="parent">
+    <h1>div 객체 생성 및 속성변경</h1>
+    <hr />
+    <p>Lorem ipsum dolor sit amet.</p>
+    <a href="javascript:create()">div 생성하기</a>
+  </body>
+</html>

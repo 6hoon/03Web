@@ -15,6 +15,7 @@
           warnId.innerHTML = `영문자, 숫자만 입력가능, 영어로 시작하는 6~12자 입력`;
           return false;
         } else if (memberId.value === "") {
+          warnNick.style.color = `red`;
           warnId.innerHTML = `공백을 입력하지 마시오`;
           return false;
         } else {
@@ -33,6 +34,7 @@
           warnPw.innerHTML = `영문자, 숫자, 특수문자를 포함하여 8~16자를 입력하세요`;
           return false;
         } else if (memberPw.value === "") {
+          warnNick.style.color = `red`;
           warnPw.innerHTML = `공백을 입력하지 마시오`;
           return false;
         } else {
@@ -52,6 +54,7 @@
           pwConfirm.innerHTML = `일치`;
           return true;
         } else {
+          warnNick.style.color = `red`;
           pwConfirm.innerHTML = `불일치`;
           return false;
         }
@@ -65,6 +68,7 @@
           warnName.innerHTML = `한글 2~4자 입력`;
           return false;
         } else if (userName.value === "") {
+          warnNick.style.color = `red`;
           warnName.innerHTML = `공백을 입력하지 마시오`;
           return false;
         } else {
@@ -82,6 +86,7 @@
           warnNick.innerHTML = `영문자, 숫자만 입력가능, 6~12자 입력`;
           return false;
         } else if (userNick.value === "") {
+          warnNick.style.color = `red`;
           warnNick.innerHTML = `공백을 입력하지 마시오`;
           return false;
         } else {
@@ -91,21 +96,54 @@
         }
       }
       function okEmail() {
-        const userNick = document.querySelector(`#userNick`);
-        const warnNick = document.querySelector(`#warnNick`);
-        let nickExp = /^[a-z]+[a-z0-9]{5,11}$/;
-        if (!userNick.value.match(nickExp)) {
-          warnNick.style.color = `red`;
-          warnNick.innerHTML = `영문자, 숫자만 입력가능, 6~12자 입력`;
+        const userEmail = document.querySelector(`#userEmail`);
+        const warnEmail = document.querySelector(`#warnEmail`);
+        let eamilExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        if (!userEmail.value.match(eamilExp)) {
+          warnEmail.style.color = `red`;
+          warnEmail.innerHTML = `이메일 입력`;
           return false;
-        } else if (userNick.value === "") {
-          warnNick.innerHTML = `공백을 입력하지 마시오`;
+        } else if (userEmail.value === "") {
+          warnNick.style.color = `red`;
+          warnEmail.innerHTML = `공백을 입력하지 마시오`;
           return false;
         } else {
-          warnNick.style.color = `green`;
-          warnNick.innerHTML = `사용 가능한 닉네임입니다`;
+          warnEmail.style.color = `green`;
+          warnEmail.innerHTML = `올바른 이메일입니다`;
           return true;
         }
+      }
+      function checkAll(event) {
+        if (
+          okId() &&
+          okPw() &&
+          okCheckPw() &&
+          okName() &&
+          okNick() &&
+          okEmail()
+        ) {
+          const memberId = document.querySelector(`#memberId`);
+          const memberPw = document.querySelector(`#memberPw`);
+          const userName = document.querySelector(`#userName`);
+          const userNick = document.querySelector(`#userNick`);
+          const userEmail = document.querySelector(`#userEmail`);
+          let msg = `1. 아이디 : ${memberId.value}\n`;
+          msg += `2. 비밀번호 : ${memberPw.value}\n`;
+          msg += `3. 이름 : ${userName.value}\n`;
+          msg += `4. 닉네임 : ${userNick.value}\n`;
+          msg += `5. 이메일 : ${userEmail.value}\n`;
+          msg += `\t가입완료`;
+          alert(msg);
+          return true;
+        } else {
+          alert(`미입력된 내용 추가,\n빨간색으로 표시된 내용을 수정`);
+          event.preventDefault();
+          return false;
+        }
+      }
+      function refresh() {
+        alert(`새로고침`);
+        location.reload(true);
       }
     </script>
   </head>
@@ -121,7 +159,7 @@
           </td>
           <td class="content">
             <span id="warnId"
-              >영문자, 숫자만 입력가능, 영어로 시작하는 3~12자 입력</span
+              >영문자, 숫자만 입력가능, 영어로 시작하는 6~12자 입력</span
             ><br />
             <input
               class="request"
@@ -248,10 +286,12 @@
         </tr>
       </table>
       <div class="last">
-        <button type="submit" class="createAccount" onclick="checkAll()">
+        <button type="submit" class="createAccount" onclick="checkAll(event)">
           <b>회원가입</b>
         </button>
-        <button class="cancel" onclick="refresh()"><b>취소</b></button>
+        <button type="reset" class="cancel" onclick="refresh()">
+          <b>취소</b>
+        </button>
       </div>
     </form>
   </body>

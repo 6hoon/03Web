@@ -15,7 +15,6 @@ form {
 }
 table {
   width: 100%;
-  border: 1px solid whi;
   border-collapse: collapse;
 }
 tr,
@@ -35,13 +34,7 @@ td.content {
   padding: 5px;
   font-size: 0.8em;
 }
-td.ratio {
-  display: flex;
-  border-top: 0;
-  border-bottom: 0;
-  align-items: center;
-  font-size: 0.7em;
-}
+
 td > span {
   font-size: 0.8em;
 }
@@ -52,17 +45,7 @@ input {
   border-radius: 2px;
   background-color: #f4f4f4;
 }
-input.request {
-  background-image: url(./image.png);
-  background-repeat: no-repeat;
-  background-position: top right;
-}
 
-div.private {
-  display: flex;
-  align-items: center;
-  font-size: 0.7em;
-}
 div.last {
   width: 150px;
   margin: 20px auto;
@@ -90,8 +73,4 @@ button.createAccount:hover {
 button.cancel:hover {
   background-color: red;
   color: black;
-}
-img.code {
-  border: 1px solid grey;
-  border-radius: 2px;
 }
