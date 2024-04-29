@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let width = 1;
+      function wheel(e, obj) {
+        if (e.wheelDelta < 0) {
+          width--;
+          if (width < 0) {
+            width = 0;
+          }
+        } else {
+          width++;
+        }
+        obj.style.borderStyle = "ridge";
+        obj.style.borderWidth = width + "px";
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1>마우스 관련 이벤트 리스너</h1>
+    <hr />
+    <p>
+      마우스 관련
+      <span onwheel="wheel(event, this)" style="display: inline-block"
+        >이벤트</span
+      >가 발생합니다.
+    </p>
+  </body>
+</html>

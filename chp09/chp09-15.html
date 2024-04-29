@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let imgNameArr = [
+        "./images/Koala.png",
+        "./images/apple.png",
+        "./images/banana.png",
+        "./images/beach.png",
+        "./images/Desert.png",
+        "./images/Jellyfish.png",
+        "./images/Tulips.png",
+        "./images/Chrysanthemum.png",
+      ];
+      function changeImg(img) {
+        img.src = imgNameArr[parseInt(Math.random() * (7 - 0 + 1) + 0)];
+      }
+    </script>
+  </head>
+  <body>
+    <h1>new Image()로 이미지 로딩</h1>
+    <hr />
+    <div>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, nam.
+      </p>
+      <img
+        src="./images/Koala.png"
+        alt="사진"
+        width="200px"
+        onclick="changeImg(this)"
+      />
+    </div>
+  </body>
+</html>

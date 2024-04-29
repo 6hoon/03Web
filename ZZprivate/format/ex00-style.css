@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ul */
+ul.row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.row > li {
+  display: inline-block;
+}
+
+/* flex */
+div.row {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+div.col {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+}

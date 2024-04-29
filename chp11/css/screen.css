@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* default */
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul.row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.row > li {
+  display: inline-block;
+}
+div.row {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+div.col {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+}
+/* header */
+header {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  height: 50px;
+}
+header > div.row {
+  width: 55%;
+  justify-content: space-between;
+}
+header > div.row a {
+  font-size: 1.2em;
+  font-weight: 900;
+  padding: 0 10px;
+}
+/* nav */
+nav {
+  width: 100%;
+}
+div.nav {
+  width: 55%;
+  padding: 0;
+  margin: 0 auto;
+}
+div.nav > ul.row {
+  display: flex;
+  justify-content: space-between;
+}
+div.nav > ul.row > li > a {
+  border: 1px solid black;
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  text-align: center;
+  padding: 8px;
+}
+div.nav > ul.row a.nav {
+}
+div.nav > ul.row a.nav_sub {
+  display: none;
+}
+
+/* slide show */
+div.slideshow {
+  height: 465px;
+  min-width: 960px;
+  position: relative;
+  background-color: black;
+}
+div.slideshow_slides {
+  /* border: 1px solid red; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+}
+div.slideshow_slides a {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+/* 네비게이션 바를 중앙에 배치한다 */
+div.slideshow_nav a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 62px;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  opacity: 0.4;
+  color: white;
+}
+div.slideshow_nav a.prev {
+  margin-left: -462px;
+}
+div.slideshow_nav a.next {
+  margin-left: 400px;
+}
+a:hover {
+  color: grey;
+}
+
+/* indicator */
+div.indicator {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  bottom: 20px;
+}
+div.indicator a {
+  padding: 5px;
+  display: inline-block;
+  font-size: 24px;
+  color: white;
+  opacity: 0.4;
+}
+div.indicator a.active {
+  color: orangered;
+}

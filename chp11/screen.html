@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/screen.css" />
+    <script src="./js/screen.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c4ece921e3.js"
+      defer
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="call_js(),header()">
+    <!-- header -->
+    <header>
+      <div class="row">
+        <ul class="row">
+          <li><a href="">menu1</a></li>
+          <li><a href="">menu2</a></li>
+        </ul>
+        <ul class="row">
+          <li><a href="">sub1</a></li>
+          <li><a href="">sub2</a></li>
+          <li><a href="">sub3</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- nav -->
+    <nav>
+      <div class="nav">
+        <ul class="row">
+          <li>
+            <a href="" class="nav">nav1</a>
+          </li>
+          <li>
+            <a href="" class="nav">nav1</a>
+          </li>
+          <li>
+            <a href="" class="nav">nav1</a>
+          </li>
+          <li>
+            <a href="" class="nav">nav1</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav">
+        <ul class="row" id="nav_sub">
+          <li>
+            <a href="" class="nav_sub">sub1-1</a
+            ><a href="" class="nav_sub">sub1-2</a>
+          </li>
+          <li>
+            <a href="" class="nav_sub">sub1-1</a
+            ><a href="" class="nav_sub">sub1-2</a>
+          </li>
+          <li>
+            <a href="" class="nav_sub">sub1-1</a
+            ><a href="" class="nav_sub">sub1-2</a>
+          </li>
+          <li>
+            <a href="" class="nav_sub">sub1-1</a
+            ><a href="" class="nav_sub">sub1-2</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- >> slideshow -> 절대값(position: absolute)으로 해당 div들을 배치해야함 -->
+    <div class="slideshow">
+      <div class="slideshow_slides">
+        <a href="http://www.naver.com" target="_blank"
+          ><img src="./img/slide-1.jpg" alt="slide1"
+        /></a>
+        <a href="#"><img src="./img/slide-2.jpg" alt="slide2" /></a>
+        <a href="#"><img src="./img/slide-3.jpg" alt="slide3" /></a>
+        <a href="#"><img src="./img/slide-4.jpg" alt="slide4" /></a>
+      </div>
+      <div class="slideshow_nav">
+        <a href="" class="prev"
+          ><i class="fa-solid fa-circle-chevron-left"></i
+        ></a>
+        <a href="" class="next"
+          ><i class="fa-solid fa-circle-chevron-right"></i
+        ></a>
+      </div>
+      <div class="indicator">
+        <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
+        <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+        <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+        <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+      </div>
+    </div>
+
+    <!-- main -->
+    <!-- footer -->
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function changeImage() {
+        let imgName = document.querySelector(`#imgName`);
+        let imgSize = document.querySelector(`#imgSize`);
+        let imgName2 = document.querySelector(`#imgName2`);
+        let myImg = document.querySelector(`#myImg`);
+        let index = imgName.selectedIndex;
+        myImg.src = imgName.options[index].value; // -> 문자열 값
+        imgName2.innerHTML = imgName.options[index].innerHTML;
+        myImg.addEventListener("load", () => {
+          console.log("image onload");
+          imgSize.innerHTML = `${myImg.width}*${myImg.height}`;
+        });
+        console.log(`index=${index}`);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>onload로 이미지 출력</h1>
+    <hr />
+    <form action="#" method="post">
+      <select name="imgName" id="imgName" onchange="changeImage()">
+        <option value="./images/apple.png">사과</option>
+        <option value="./images/banana.png">바나나</option>
+        <option value="./images/mango.png">망고</option>
+      </select>
+      <span id="imgSize">이미지 사이즈 출력</span>
+      <span id="imgName2">이미지 이름</span>
+      <br /><br />
+      <img id="myImg" src="./images/apple.png" alt="이미지" />
+    </form>
+  </body>
+</html>

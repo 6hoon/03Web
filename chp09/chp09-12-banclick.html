@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function hideMenu() {
+        alert(`우클릭 금지`);
+        return false;
+      }
+      document.oncontextmenu = hideMenu;
+    </script>
+  </head>
+  <body>
+    <h1>oncontextmenu에서 컨텍스트 메뉴 금지</h1>
+    <hr />
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quidem?
+      </p>
+      <img
+        src="../chp11/img/slide-1.jpg"
+        alt="우주"
+        width="50%"
+        height="200px"
+      />
+    </div>
+  </body>
+</html>
