@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+      }
+      button {
+        position: fixed;
+        right: 50px;
+        top: 50px;
+        padding: 20px;
+        color: red;
+      }
+    </style>
+    <script>
+      let inter = 0;
+      function main() {
+        let but = document.querySelector(`button`);
+        console.log(but);
+
+        function scroll() {
+          inter = setInterval(() => {
+            window.scrollBy(0, 50);
+          }, 200);
+        }
+        function stop() {
+          if (inter > 0) {
+            clearInterval(inter);
+            inter = 0;
+          }
+        }
+        but.addEventListener("click", () => {
+          if (inter === 0) {
+            scroll();
+          } else {
+            stop();
+          }
+        });
+      }
+    </script>
+  </head>
+  <body onload="main()">
+    <h1>자동스크롤</h1>
+    <hr />
+    <div style="width: 40%">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro
+      perferendis modi optio possimus, rem corporis ex enim sapiente facere
+      itaque repellendus? Harum error, pariatur accusamus mollitia veniam
+      consequuntur repellat. Placeat ipsum consequuntur fugiat nulla ad
+      doloribus beatae quibusdam labore maiores assumenda, ab et dolores,
+      distinctio aspernatur recusandae deleniti. Perspiciatis reiciendis nam
+      distinctio odio eaque praesentium omnis tenetur quia rem? Beatae ipsam
+      nobis sed. Cum tempora est cumque, neque, obcaecati labore ullam veritatis
+      ut harum sint exercitationem sunt commodi culpa consequuntur. Mollitia
+      magni deleniti voluptatibus quos consequatur nisi corporis temporibus.
+      Dolore, beatae hic aliquid quas unde saepe quo voluptas ullam
+      reprehenderit et voluptatibus consequuntur veritatis aliquam qui
+      exercitationem? Cumque aperiam totam sequi maxime asperiores delectus nisi
+      dolorum aliquam autem commodi? Quo velit deserunt ipsum labore accusamus
+      voluptatum sunt quaerat earum recusandae dolores! Unde quos, consequuntur
+      velit voluptatum obcaecati atque, ex soluta dolore totam corrupti
+      exercitationem quaerat nemo dolor eum reprehenderit. Cupiditate at
+      exercitationem eius! Repellat optio eum perspiciatis facilis ipsum omnis
+      fugiat quaerat aliquam vitae, porro eligendi maxime rem harum aut eius
+      blanditiis temporibus. Minus illo sed incidunt impedit animi! Voluptates
+      cupiditate provident quaerat expedita neque maiores repellendus eius
+      aliquid. Veritatis, fugiat nesciunt! Placeat animi iusto reiciendis.
+      Velit, minus! Nobis reprehenderit totam iure blanditiis modi incidunt
+      libero aut harum veritatis! Debitis porro consequatur laborum incidunt
+      rerum voluptate ad perspiciatis voluptatem, quaerat corporis sed rem
+      voluptatibus iste reiciendis a optio quam ratione expedita nisi,
+      voluptatum sunt enim, earum necessitatibus dolores? Aspernatur? Tempore ex
+      doloremque cumque eligendi natus. Quae saepe quam eligendi provident eius
+      blanditiis beatae excepturi amet debitis sed vitae harum exercitationem
+      pariatur maxime, odio perspiciatis quisquam ab suscipit quas illum! Alias
+      assumenda fuga nesciunt praesentium! Assumenda, maiores rerum nemo ducimus
+      culpa architecto consectetur. Non exercitationem culpa suscipit vel
+      repellat voluptas beatae consequatur, fugit amet deleniti! Culpa expedita
+      maiores quas amet? Cupiditate, voluptatum totam natus porro placeat
+      dignissimos voluptate eaque reiciendis, aliquid libero asperiores!
+      Doloremque quisquam fugiat aliquid. Illo et facilis vel quo itaque est
+      reiciendis, dicta mollitia adipisci, magnam laborum? Beatae molestiae
+      numquam cum id ducimus soluta corrupti tempora. Quibusdam veritatis
+      placeat pariatur cum odit inventore ducimus error mollitia autem esse
+      aliquam, totam beatae optio dicta, amet excepturi, facilis modi! Officia
+      id amet provident, quia natus optio vero soluta neque labore totam
+      necessitatibus similique, beatae sit vitae maxime tenetur? Quibusdam sunt
+      voluptates deserunt beatae provident in aspernatur doloribus at voluptate.
+      Aspernatur dolorum eligendi, officiis atque corrupti amet ab hic qui
+      dolores tempora, blanditiis consectetur similique veritatis exercitationem
+      facere, error harum doloremque consequatur tempore! Ut aperiam eveniet
+      sint itaque maiores reiciendis. Porro numquam provident accusantium
+      consequuntur reprehenderit, molestias dignissimos cum nulla possimus,
+      corporis nihil est recusandae reiciendis quibusdam quisquam, perferendis
+      deleniti nesciunt illum accusamus nemo nisi! Id nesciunt impedit facilis
+      sed! Perferendis voluptatem molestiae harum voluptatum ea laborum
+      consequatur iste? Enim culpa repudiandae placeat? Incidunt harum vel optio
+      explicabo velit asperiores non beatae. Quos temporibus nihil iste
+      accusamus delectus placeat quis. Voluptas, velit inventore. Quia,
+      provident obcaecati hic, harum, ut culpa voluptas voluptates iusto ullam
+      porro voluptatibus sequi deserunt quam. Quisquam, delectus! Repellendus
+      illo doloribus totam blanditiis nesciunt, facilis dolore necessitatibus?
+      Architecto vero dolorum maxime nostrum error iusto, eveniet blanditiis
+      nobis est totam adipisci quas nam hic expedita voluptates ullam quis
+      quaerat aliquam pariatur. Iste ut non facilis distinctio veniam mollitia.
+      Harum nostrum ex mollitia error illo labore modi quisquam officia,
+      voluptatem expedita recusandae! Tempora eos, eaque magnam pariatur hic
+      voluptates, enim corrupti fugiat repellendus provident laboriosam id
+      blanditiis veritatis soluta! Corrupti accusantium maiores dolorem harum
+      possimus nam voluptates illum, in nihil iusto nobis reiciendis, architecto
+      ex sit modi nostrum dolores quas itaque temporibus repellat dolore enim.
+      Quos corrupti in officiis!
+      <button type="button">이동/멈춤</button>
+    </div>
+  </body>
+</html>

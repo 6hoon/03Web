@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let loadID = 0;
+      let timerID = 0;
+      let count = 1;
+      function main() {
+        let img = document.querySelector(`div img`);
+        let timer = document.querySelector(`#timer`);
+        console.log(img);
+        console.log(timer);
+
+        //
+        img.addEventListener("mouseover", () => {
+          timerID = setInterval(timeUp, 1000);
+          loadID = setTimeout(load, 5000);
+        });
+        //
+        img.addEventListener("mouseout", () => {
+          count = 1;
+          timer.value = count;
+          if (loadID > 0) {
+            clearTimeout(loadID);
+          }
+          if (timerID > 0) {
+            clearInterval(timerID);
+          }
+          timer.value = `리셋`;
+          setTimeout(() => {
+            timer.value = `5가 되면 naver로 넘어감`;
+          }, 500);
+        });
+        function timeUp() {
+          timer.value = count;
+          count++;
+        }
+        //
+      }
+      function load() {
+        window.location = "http://www.naver.com";
+      }
+    </script>
+  </head>
+  <body onload="main()">
+    <h1>이미지에 5초 mouseover -> 해당 사이트로 이동</h1>
+    <hr />
+    <div>
+      <img src="../source/10/media/naver.gif" alt="naver" width="500px" />
+      <input
+        type="text"
+        name="timer"
+        id="timer"
+        value="5가 되면 naver로 넘어감"
+        style="font-size: 2em; text-align: center"
+      />
+    </div>
+  </body>
+</html>

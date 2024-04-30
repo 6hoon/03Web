@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let myWin = null;
+      function load(URL) {
+        myWin = window.open(URL, "myWin");
+      }
+      function winClose() {
+        if (myWin !== null) {
+          myWin.close();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>window.open()</h1>
+    <hr />
+    <a href="javascript:load(`http://www.naver.com`)">네이버</a>
+    <br />
+    <a href="javascript:load(`http://www.google.com`)">구글</a>
+    <br />
+    <a href="javascript:load(`http://www.nate.com`)">네이트</a>
+    <br />
+    <a href="javascript:winClose()">창닫기</a>
+  </body>
+</html>

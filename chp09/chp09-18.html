@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function cal() {
+        let test = 0;
+        let cartArr = new Array();
+        let checkArr = document.querySelectorAll(`form input[type="checkbox"]`);
+        console.log(checkArr);
+        checkArr.forEach((e) => {
+          if (e.checked === true) {
+            cartArr.push(e);
+          }
+        });
+        console.log(cartArr);
+        cartArr.forEach((e) => (test += parseInt(e.value)));
+        console.log(test);
+        document.querySelector(`#sum`).value = test;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>물품 계산</h1>
+    <hr />
+    <form action="#" method="post">
+      <fieldset>
+        <legend>장바구니</legend>
+        <input type="checkbox" name="hat" id="hat" value="10000" />
+        <label for="hat">모자</label>
+        <input type="checkbox" name="pants" id="pants" value="20000" />
+        <label for="hat">바지</label>
+        <input type="checkbox" name="bag" id="bag" value="30000" />
+        <label for="hat">가방</label>
+        <br />
+        <button type="button" onclick="cal()">계산</button>
+        <input type="number" name="sum" id="sum" vlaue="0" />
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function check() {
+        let id = null;
+        let cityArr = document.querySelectorAll(`form input[name = "city"]`);
+        console.log(cityArr);
+        cityArr.forEach((e) => {
+          if (e.checked === true) {
+            id = e.id;
+            console.log(id);
+          }
+        });
+        if (id !== null) {
+          let city = document.querySelector(`form label[for="${id}"]`);
+          console.log(city);
+          alert(`선택한 도시는 : ` + city.innerHTML);
+        } else {
+          alert(`선택한 도시가 없습니다`);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>버튼을 클릭하면 선택된 라디오 버튼의 value를 출력합니다.</h1>
+    <hr />
+    <form action="#" method="post">
+      <fieldset>
+        <legend>도시입력</legend>
+        <input type="radio" name="city" id="city1" value="seaoul" />
+        <label for="city1">서울</label>
+        <input type="radio" name="city" id="city2" value="busan" />
+        <label for="city2">부산</label>
+        <input type="radio" name="city" id="city3" value="daegu" />
+        <label for="city3">대구</label>
+        <br /><br />
+        <button type="button" onclick="check()">check</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

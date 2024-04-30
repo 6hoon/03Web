@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function main() {
+        let inter = 0;
+        let rspan = document.querySelector(`div span`);
+        function rotate() {
+          inter = setInterval(() => {
+            let span = document.querySelector(`div span`);
+            let str = span.innerHTML;
+            let end = str.substr(str.length - 2, str.length - 1);
+            let remain = str.substr(0, str.length - 2);
+            span.innerHTML = end + remain;
+          }, 200);
+        }
+        rotate();
+        rspan.addEventListener("click", () => {
+          clearInterval(inter);
+        });
+        rspan.addEventListener("dblclick", rotate);
+      }
+    </script>
+  </head>
+  <body onload="main()">
+    <h1>텍스트회전<br />클릭시 중단</h1>
+    <hr />
+    <div>
+      <span style="font-size: 2em"
+        >역회전 하는 텍스트입니다 역회전 하는 텍스트입니다</span
+      >
+    </div>
+  </body>
+</html>

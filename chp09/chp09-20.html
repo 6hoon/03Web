@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function print(obj, e) {
+        let div = document.querySelector(`div`);
+        div.innerHTML = `e.key = ${e.key}<br> e.code = ${e.code}`;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>키 리스너</h1>
+    <hr />
+    <p>모든키</p>
+    <!-- <form action="#" method="post"> -->
+    <input type="text" name="key" id="key" onkeydown="print(this,event)" />
+    <div>키 출력</div>
+    <!-- </form> -->
+  </body>
+</html>

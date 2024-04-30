@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 50px;
+        text-align: left;
+        padding-left: 5px;
+      }
+      button {
+        margin-left: 5px;
+      }
+    </style>
+    <script>
+      function checkName(obj) {
+        if (obj.value === "") {
+          console.log(`obj.value = ${obj.value}`);
+          obj.focus();
+        }
+      }
+    </script>
+  </head>
+  <body onload="document.querySelector(`#name`).focus()">
+    <h1>onfoncus onblur</h1>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magni?
+    </p>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>개인정보입력</legend>
+        <label for="name">name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          size="20"
+          maxlength="4"
+          onblur="checkName(this)"
+        /><br />
+        <label for="name">no</label>
+        <input type="number" name="no" id="no" size="20" maxlength="8" /><br />
+        <button type="submit">send</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
