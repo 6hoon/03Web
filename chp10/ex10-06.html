@@ -17,14 +17,14 @@
       }
     </style>
     <script>
-      let inter = 0;
       function main() {
+        let inter = 0;
         let but = document.querySelector(`button`);
         console.log(but);
 
         function scroll() {
           inter = setInterval(() => {
-            window.scrollBy(0, 50);
+            window.scrollBy(0, 20);
           }, 200);
         }
         function stop() {
