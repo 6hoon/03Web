@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1 width=300">
+      <tr>
+        <td width="300" align="center">사용자님 환영합니다.</td>
+      </tr>
+      <tr>
+        <td align="center">
+          <a href="#">회원정보</a> <a href="Logout">로그아웃</a>
+        </td>
+      </tr>
+    </table>
+    <br /><br /><br /><br />
+
+    <form action="LoginCheck" method="post">
+      <table border="1 width=300">
+        <tr>
+          <th width="100">아이디</th>
+          <td width="200" align="center">
+            <input type="text" name="id" />
+          </td>
+        </tr>
+        <tr>
+          <th width="100">비밀번호</th>
+          <td width="200" align="center">
+            <input type="password" name="password" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="button" value="회원가입" />
+            <input type="submit" value="로그인" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

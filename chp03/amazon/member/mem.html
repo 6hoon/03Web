@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./mem-style.css" />
+  </head>
+  <body>
+    <h1>회 원 가 입</h1>
+    <form action="#" method="post">
+      <h4>사이트 이용정보 입력</h4>
+      <table>
+        <tr>
+          <td class="title">
+            <label for="memberId"><b>아이디</b></label>
+          </td>
+          <td class="content">
+            <span>영문자, 숫자_만 입력가능, 최소 3자이상 입력하세요</span><br />
+            <input
+              class="request"
+              type="text"
+              name="memberId"
+              id="memberId"
+              size="25"
+              minlength="3"
+              maxlength="12"
+              required
+              value="id"
+              readonly
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            <label for="memberPw"><b>비밀번호</b></label>
+          </td>
+          <td class="content">
+            <span>영문자, 숫자, 특수문자를 포함하여 6-12자를 입력하세요</span
+            ><br />
+            <input
+              class="request"
+              type="password"
+              name="memberPw"
+              id="memberPw"
+              size="25"
+              minlength="6"
+              maxlength="12"
+              required
+              placeholder="PW입력"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            <label for="checkPw"><b>비밀번호 확인</b></label>
+          </td>
+          <td class="content">
+            <input
+              name="checkPw"
+              id="checkPw"
+              class="request"
+              type="text"
+              size="25"
+              minlength="6"
+              maxlength="12"
+              required
+              placeholder="PW확인"
+            />
+          </td>
+        </tr>
+      </table>
+
+      <h4>개인정보 입력</h4>
+      <table>
+        <tr>
+          <td class="title">
+            <label for="userName"><b>이름</b></label>
+          </td>
+          <td class="content">
+            <input
+              type="text"
+              class="request"
+              size="25"
+              minlength="2"
+              maxlength="12"
+              required
+              name="userName"
+              id="userName"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            <label for="userNick"><b>닉네임</b></label>
+          </td>
+          <td class="content">
+            <span
+              >공백없이 한글,영문,숫자만 입력가능 (한글2자, 영문4자 이상)<br />
+              닉네임을 바꾸시면 앞으로 1일이내에는 변경할 수 없습니다. </span
+            ><br />
+            <input
+              type="text"
+              class="request"
+              size="25"
+              minlength="2"
+              maxlength="12"
+              required
+              name="userNick"
+              id="userNick"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            <label for="userEmail"><b>E-mail</b></label>
+          </td>
+          <td class="content">
+            <input
+              type="text"
+              class="request"
+              size="50"
+              minlength="10"
+              maxlength="50"
+              required
+              name="userEmail"
+              id="userEmail"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            <label for="userNum"><b>전화번호</b></label>
+          </td>
+          <td class="content">
+            <input
+              type="text"
+              class="request"
+              size="25"
+              minlength="7"
+              maxlength="11"
+              required
+              name="userNum"
+              id="userNum"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            <label for="userPhone"><b>휴대폰번호</b></label>
+          </td>
+          <td class="content">
+            <input
+              type="text"
+              class="request"
+              size="25"
+              minlength="10"
+              maxlength="11"
+              required
+              name="userPhone"
+              id="userPhone"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            <label for="userBirth"><b>생년월일</b></label>
+          </td>
+          <td class="content">
+            <input
+              placeholder="연도-월-일"
+              type="text"
+              size="10"
+              minlength="8"
+              maxlength="10"
+              required
+              name="userBirth"
+              id="userBirth"
+            />
+          </td>
+        </tr>
+      </table>
+
+      <div class="last">
+        <button type="submit" class="createAccount"><b>회원가입</b></button>
+        <button class="cancel">
+          <a href="#">취소</a>
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
