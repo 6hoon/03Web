@@ -13,59 +13,59 @@
       <table>
         <tr>
           <td class="title">
-            <label for="memberId"><b>아이디</b></label>
+            <label for="id"><b>아이디</b></label>
           </td>
           <td class="content">
             <span>영문자, 숫자_만 입력가능, 최소 3자이상 입력하세요</span><br />
             <input
               class="request"
               type="text"
-              name="memberId"
-              id="memberId"
+              name="id"
+              id="id"
               size="25"
               minlength="3"
               maxlength="12"
               required
-              value="id"
-              readonly
+              placeholder="아이디 입력"
+              required
             />
           </td>
         </tr>
         <tr>
           <td class="title">
-            <label for="memberPw"><b>비밀번호</b></label>
+            <label for="pass"><b>비밀번호</b></label>
           </td>
           <td class="content">
-            <span>영문자, 숫자, 특수문자를 포함하여 6-12자를 입력하세요</span
+            <span>영문자, 숫자, 특수문자를 포함하여 8-20자를 입력하세요</span
             ><br />
             <input
               class="request"
               type="password"
-              name="memberPw"
-              id="memberPw"
+              name="pass"
+              id="pass"
               size="25"
-              minlength="6"
-              maxlength="12"
+              minlength="8"
+              maxlength="20"
               required
-              placeholder="PW입력"
+              placeholder="비밀번호 입력"
             />
           </td>
         </tr>
         <tr>
           <td class="title">
-            <label for="checkPw"><b>비밀번호 확인</b></label>
+            <label for="passCheck"><b>비밀번호 확인</b></label>
           </td>
           <td class="content">
             <input
-              name="checkPw"
-              id="checkPw"
+              name="passCheck"
+              id="passCheck"
               class="request"
               type="text"
               size="25"
-              minlength="6"
-              maxlength="12"
+              minlength="8"
+              maxlength="20"
               required
-              placeholder="PW확인"
+              placeholder="비밀번호 확인"
             />
           </td>
         </tr>
@@ -75,7 +75,7 @@
       <table>
         <tr>
           <td class="title">
-            <label for="userName"><b>이름</b></label>
+            <label for="name"><b>이름</b></label>
           </td>
           <td class="content">
             <input
@@ -83,37 +83,62 @@
               class="request"
               size="25"
               minlength="2"
-              maxlength="12"
+              maxlength="10"
               required
-              name="userName"
-              id="userName"
+              name="name"
+              id="name"
             />
           </td>
         </tr>
         <tr>
           <td class="title">
-            <label for="userNick"><b>닉네임</b></label>
+            <label><b>성별</b></label>
+          </td>
+          <td class="content" style="display: flex; align-items: center">
+            <label for="genderM">M</label>
+            <input
+              type="radio"
+              class="request"
+              value="M"
+              name="gender"
+              id="genderM"
+              checked
+            />
+            /&nbsp;
+            <label for="genderM">W</label>
+            <input
+              type="radio"
+              class="request"
+              value="W"
+              name="gender"
+              id="genderW"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            <label for="phone2"><b>전화번호</b></label>
           </td>
           <td class="content">
-            <span
-              >공백없이 한글,영문,숫자만 입력가능 (한글2자, 영문4자 이상)<br />
-              닉네임을 바꾸시면 앞으로 1일이내에는 변경할 수 없습니다. </span
-            ><br />
+            <select name="phone1" id="phone1">
+              <option value="02">02</option>
+              <option value="010">010</option>
+            </select>
+            -
             <input
               type="text"
-              class="request"
-              size="25"
-              minlength="2"
-              maxlength="12"
-              required
-              name="userNick"
-              id="userNick"
+              name="phone2"
+              id="phone2"
+              size="4"
+              maxlength="4"
             />
+            -
+            <input type="text" name="phone3" size="4" maxlength="4" />
           </td>
         </tr>
         <tr>
           <td class="title">
-            <label for="userEmail"><b>E-mail</b></label>
+            <label for="email"><b>E-mail</b></label>
           </td>
           <td class="content">
             <input
@@ -121,61 +146,44 @@
               class="request"
               size="50"
               minlength="10"
-              maxlength="50"
+              maxlength="30"
               required
-              name="userEmail"
-              id="userEmail"
+              name="email"
+              id="email"
             />
           </td>
         </tr>
         <tr>
           <td class="title">
-            <label for="userNum"><b>전화번호</b></label>
+            <label for="email"><b>주소</b></label>
           </td>
           <td class="content">
             <input
               type="text"
               class="request"
-              size="25"
-              minlength="7"
-              maxlength="11"
+              size="34"
               required
-              name="userNum"
-              id="userNum"
+              name="zipcode"
+              id="zipcode"
             />
-          </td>
-        </tr>
-        <tr>
-          <td class="title">
-            <label for="userPhone"><b>휴대폰번호</b></label>
-          </td>
-          <td class="content">
+            <button>우편번호 조회</button>
+            <br />
             <input
               type="text"
               class="request"
-              size="25"
-              minlength="10"
-              maxlength="11"
+              size="50"
               required
-              name="userPhone"
-              id="userPhone"
+              name="address1"
+              id="address1"
             />
-          </td>
-        </tr>
-        <tr>
-          <td class="title">
-            <label for="userBirth"><b>생년월일</b></label>
-          </td>
-          <td class="content">
+            <br />
             <input
-              placeholder="연도-월-일"
               type="text"
-              size="10"
-              minlength="8"
-              maxlength="10"
+              class="request"
+              size="50"
               required
-              name="userBirth"
-              id="userBirth"
+              name="address2"
+              id="address2"
             />
           </td>
         </tr>
@@ -183,8 +191,8 @@
 
       <div class="last">
         <button type="submit" class="createAccount"><b>회원가입</b></button>
-        <button class="cancel">
-          <a href="#">취소</a>
+        <button class="cancel" onclick="javascript:window.location='#'">
+          <b>취소</b>
         </button>
       </div>
     </form>

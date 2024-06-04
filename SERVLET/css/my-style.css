@@ -1,0 +1,54 @@
+body {
+  background-color: grey;
+}
+div.container {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+
+/* header */
+header {
+  margin: 0 auto;
+  text-align: center;
+}
+div.header {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+input.button {
+  border-radius: 5px;
+  border: 0;
+  font-size: 1em;
+  background-color: lightgrey;
+}
+
+/* main */
+main > table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+td {
+  text-align: center;
+  border: 1px solid black;
+  font-size: 1em;
+}
+td.no {
+  width: 40px;
+}
+td.id {
+  width: 100px;
+}
+td.date {
+  width: 100px;
+}
+td.text {
+  height: 60vh;
+}

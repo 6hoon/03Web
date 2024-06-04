@@ -1,12 +1,9 @@
-.con {
+div.con {
   margin: 0 auto;
   width: 300px;
 }
-.ratio {
-  text-align: center;
-  padding: 10px;
-}
-.login {
+
+div.login {
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -21,12 +18,16 @@ input.loginLogo:hover {
   background-color: greenyellow;
   color: rgb(249, 93, 3);
 }
-.check {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-.last {
+
+div.loginBot {
   text-align: center;
   padding: 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  color: black;
 }
